@@ -132,7 +132,6 @@ public class AlignmentRegionDataReader implements DataReader<AlignmentRegion> {
          //}
         //System.out.println("start = " + start + ", end = " + end + ", length = " + (end - start) + ", alignments = "  + alignmentList.size());
         //logger.debug("start = " + start + ", end = " + end + ", length = " + (end - start) + ", alignments = "  + alignmentList.size());
-        logger.info("start = " + start + ", end = " + end + ", length = " + (end - start) + ", alignments = "  + alignmentList.size());
 
 
         AlignmentRegion alignmentRegion = new AlignmentRegion(alignmentList, alignmentDataReader.getHeader());
@@ -141,6 +140,7 @@ public class AlignmentRegionDataReader implements DataReader<AlignmentRegion> {
         alignmentRegion.setStart(start);
         alignmentRegion.setEnd(end);
 
+        logger.info("Region = " + alignmentRegion.getRegion().toString() + ", length = " + (end - start) + ", alignments = "  + alignmentList.size());
 
         return alignmentRegion;
     }

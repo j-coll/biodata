@@ -38,12 +38,17 @@ public class AlignmentConverter {
     public Alignment buildAlignment(SAMRecord record, boolean compareReference) {
         if(compareReference) {
             String seq;
-            try {
-                seq = adaptor.getSequence(new Region(record.getReferenceName(), record.getUnclippedStart(), record.getUnclippedEnd()));
-            } catch (IOException e) {
-                e.printStackTrace();
-                return null;
-            }
+                if(record.getReadUnmappedFlag()) {
+                    seq = null;
+                } else {
+                    Region region = new Region(record.getReferenceName(), record.getUnclippedStart(), record.getUnclippedEnd());
+                    try {
+                        seq = adaptor.getSequence(region);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                        seq = null;
+                    }
+                }
             return buildAlignment(record, seq);
         } else {
             return buildAlignment(record);

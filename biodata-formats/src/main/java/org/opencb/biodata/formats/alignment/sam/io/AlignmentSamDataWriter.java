@@ -32,7 +32,7 @@ public class AlignmentSamDataWriter implements AlignmentDataWriter {
     protected SAMFileWriterImpl writer;
     private SAMFileHeader samFileHeader;
     AlignmentDataReader reader;
-    protected Path input;
+    protected Path output;
     private AlignmentHeader header;
     private int maxSequenceSize = defaultMaxSequenceSize;   // max length of the reference sequence.
     private static final int defaultMaxSequenceSize = 100000;
@@ -43,8 +43,8 @@ public class AlignmentSamDataWriter implements AlignmentDataWriter {
     private SequenceDBAdaptor adaptor = new CellBaseSequenceDBAdaptor();
 
 
-    public AlignmentSamDataWriter(Path input, AlignmentHeader header) {
-        this.input = input;
+    public AlignmentSamDataWriter(Path output, AlignmentHeader header) {
+        this.output = output;
         this.header = header;
         this.reader = null;
     }
@@ -52,18 +52,15 @@ public class AlignmentSamDataWriter implements AlignmentDataWriter {
 
 
 
-    public AlignmentSamDataWriter(Path input, AlignmentDataReader reader) {
+    public AlignmentSamDataWriter(Path output, AlignmentDataReader reader) {
         this.header = null;
-        this.input = input;
+        this.output = output;
         this.reader = reader;
     }
 
     @Override
     public boolean open() {
-        if(!input.toFile().exists()){
-            return false;
-        }
-        this.writer = new SAMTextWriter(input.toFile());
+        this.writer = new SAMTextWriter(output.toFile());
 
         try {
             this.adaptor.open();
@@ -180,12 +177,12 @@ public class AlignmentSamDataWriter implements AlignmentDataWriter {
         this.maxSequenceSize = maxSequenceSize;
     }
 
-    public Path getInput() {
-        return input;
+    public Path getOutput() {
+        return output;
     }
 
-    public void setInput(Path input) {
-        this.input = input;
+    public void setOutput(Path output) {
+        this.output = output;
     }
 
     public String getReferenceSequence() {

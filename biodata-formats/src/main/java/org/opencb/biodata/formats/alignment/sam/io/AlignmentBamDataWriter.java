@@ -3,9 +3,8 @@ package org.opencb.biodata.formats.alignment.sam.io;
 import net.sf.samtools.BAMFileWriter;
 import org.opencb.biodata.models.alignment.AlignmentHeader;
 
-import java.io.File;
 import java.nio.file.Path;
-import java.nio.file.Paths;
+
 import org.opencb.biodata.formats.alignment.io.AlignmentDataReader;
 
 /**
@@ -18,22 +17,18 @@ import org.opencb.biodata.formats.alignment.io.AlignmentDataReader;
 public class AlignmentBamDataWriter extends AlignmentSamDataWriter  {
 
 
-    public AlignmentBamDataWriter(Path input, AlignmentHeader header) {
-        super(input, header);
+    public AlignmentBamDataWriter(Path output, AlignmentHeader header) {
+        super(output, header);
     }
 
-    public AlignmentBamDataWriter(Path input, AlignmentDataReader reader) {
-        super(input, reader);
+    public AlignmentBamDataWriter(Path output, AlignmentDataReader reader) {
+        super(output, reader);
     }
 
     @Override
     public boolean open() {
-        if(this.input.toFile().exists()) {
-            writer = new BAMFileWriter(this.input.toFile());
-            return true;
-        } else {
-            return false;
-        }
+        writer = new BAMFileWriter(this.output.toFile());
+        return true;
     }
 
 }
