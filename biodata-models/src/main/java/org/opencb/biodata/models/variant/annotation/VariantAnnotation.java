@@ -45,25 +45,65 @@ public class VariantAnnotation {
 
     private Map<String, Object> clinicalData;
 
-    private Map<String, Object> additionalAttributes;
+    private Map<String, String> additionalAttributes;
 
     public VariantAnnotation() {
-        this(null, 0, 0, null);
+        this(null, 0, 0, null, null);
     }
 
+    @Deprecated
     public VariantAnnotation(String chromosome, int start, int end, String referenceAllele) {
-        this.chromosome = chromosome;
-        this.start = start;
-        this.end = end;
-        this.referenceAllele = referenceAllele;
+        this(chromosome, start, end, referenceAllele, null);
     }
 
     public VariantAnnotation(String chromosome, int start, int end, String referenceAllele, String alternativeAllele) {
+        this(chromosome, start, end, referenceAllele, alternativeAllele, null, null, null, null, null, null, null, null, null, null, null);
+    }
+
+    public VariantAnnotation(String chromosome, int start, int end, String referenceAllele, String alternativeAllele,
+                             String id, List<Xref> xrefs, List<String> hgvs, List<ConsequenceType> consequenceTypes,
+                             List<Score> conservedRegionScores, List<Score> proteinSubstitutionScores,
+                             List<Frequency> populationFrequencies, List<CaddScore> caddScores,
+                             List<ExpressionValue> expressionValues, Map<String, Object> clinicalData,
+                             Map<String, String> additionalAttributes) {
         this.chromosome = chromosome;
         this.start = start;
         this.end = end;
         this.referenceAllele = referenceAllele;
         this.alternativeAllele = alternativeAllele;
+        this.id = id;
+        this.xrefs = xrefs;
+        this.hgvs = hgvs;
+        this.consequenceTypes = consequenceTypes;
+        this.conservedRegionScores = conservedRegionScores;
+        this.proteinSubstitutionScores = proteinSubstitutionScores;
+        this.populationFrequencies = populationFrequencies;
+        this.caddScores = caddScores;
+        this.expressionValues = expressionValues;
+        this.clinicalData = clinicalData;
+        this.additionalAttributes = additionalAttributes;
+    }
+
+    @Override
+    public String toString() {
+        return "VariantAnnotation{" +
+                "chromosome='" + chromosome + '\'' +
+                ", start=" + start +
+                ", end=" + end +
+                ", referenceAllele='" + referenceAllele + '\'' +
+                ", alternativeAllele='" + alternativeAllele + '\'' +
+                ", id='" + id + '\'' +
+                ", xrefs=" + xrefs +
+                ", hgvs=" + hgvs +
+                ", consequenceTypes=" + consequenceTypes +
+                ", conservedRegionScores=" + conservedRegionScores +
+                ", proteinSubstitutionScores=" + proteinSubstitutionScores +
+                ", populationFrequencies=" + populationFrequencies +
+                ", caddScores=" + caddScores +
+                ", expressionValues=" + expressionValues +
+                ", clinicalData=" + clinicalData +
+                ", additionalAttributes=" + additionalAttributes +
+                '}';
     }
 
     public String getChromosome() {
@@ -182,45 +222,15 @@ public class VariantAnnotation {
         this.clinicalData = clinicalData;
     }
 
-    public Map<String, Object> getAdditionalAttributes() {
+    public Map<String, String> getAdditionalAttributes() {
         return additionalAttributes;
     }
 
-    public void setAdditionalAttributes(Map<String, Object> additionalAttributes) {
+    public void setAdditionalAttributes(Map<String, String> additionalAttributes) {
         this.additionalAttributes = additionalAttributes;
     }
 
-//    public String getChromosome() {
-//        return chromosome;
-//    }
-//
-//    public void setChromosome(String chromosome) {
-//        this.chromosome = chromosome;
-//    }
-//
-//    public int getStart() {
-//        return start;
-//    }
-//
-//    public void setStart(int start) {
-//        this.start = start;
-//    }
-//
-//    public int getEnd() {
-//        return end;
-//    }
-//
-//    public void setEnd(int end) {
-//        this.end = end;
-//    }
-//
-//    public String getReferenceAllele() {
-//        return referenceAllele;
-//    }
-//
-//    public void setReferenceAllele(String referenceAllele) {
-//        this.referenceAllele = referenceAllele;
-//    }
+
 
 //    public Set<Gene> getGenes() {
 //        return genes;
@@ -230,6 +240,7 @@ public class VariantAnnotation {
 //        this.genes = genes;
 //    }
 
+    @Deprecated
     public void addGene(Gene gene) {
         // TODO: broken compatibility with VariantGenesAnnotator
     }
@@ -238,6 +249,7 @@ public class VariantAnnotation {
 //        this.genes.add(gene);
 //    }
 //
+    @Deprecated
     public Map<String, List<VariantEffect>> getEffects() {
         // TODO: broken compatibility with VariantConsequenceTypeAnnotator
         return new HashMap<>();
@@ -251,6 +263,7 @@ public class VariantAnnotation {
 //        this.effects = effects;
 //    }
 //
+    @Deprecated
     public void addEffect(String key, VariantEffect effect) {
         // TODO: compatibility is broken with Variant object. We no longer want an effects attribute in VariantAnnotation
     }
@@ -266,6 +279,7 @@ public class VariantAnnotation {
 //    }
 //
 
+    @Deprecated
     public Map<String, Set<Frequency>> getFrequencies() {
         return new HashMap<>(); // TODO: broken compatibility with VariantEffectConverter
     }
@@ -291,9 +305,14 @@ public class VariantAnnotation {
 //        return frequenciesBySuperPopulation.add(frequency);
 //    }
 
+    @Deprecated
     public ProteinSubstitutionScores getProteinSubstitutionScores() {
         // TODO: broken compatibility with VariantPolyphenSIFTAnnotator
         return new ProteinSubstitutionScores();
+    }
+
+    public List<Score> getProteinSubstitutionScoresList() { //TODO: ChangeName
+        return proteinSubstitutionScores;
     }
 
 //    public List<Score> getProteinSubstitutionScores() {
@@ -304,6 +323,7 @@ public class VariantAnnotation {
 //        this.proteinSubstitutionScores = proteinSubstitutionScores;
 //    }
 
+    @Deprecated
     public RegulatoryEffect getRegulatoryEffect() {
         // TODO: broken compatibility with VariantEffectConverter
         return new RegulatoryEffect();

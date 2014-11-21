@@ -13,14 +13,24 @@ public class ConsequenceType {
     private String codon;
     private String aaChange;
 
-    private static ConsequenceTypeMappings consequenceTypeMappings;
-
     public ConsequenceType(String geneName, String ensemblGeneId, String ensemblTranscriptId, String SOName) {
         this.geneName = geneName;
         this.ensemblGeneId = ensemblGeneId;
         this.ensemblTranscriptId = ensemblTranscriptId;
-        this.SOAccession = consequenceTypeMappings.getAccession(SOName);
+        this.SOAccession = ConsequenceTypeMappings.getAccession(SOName);
         this.SOName = SOName;
+    }
+
+    public ConsequenceType(String geneName, String ensemblGeneId, String ensemblTranscriptId, int SOAccession,
+                           String SOName, int relativePosition, String codon, String aaChange) {
+        this.geneName = geneName;
+        this.ensemblGeneId = ensemblGeneId;
+        this.ensemblTranscriptId = ensemblTranscriptId;
+        this.SOAccession = SOAccession;
+        this.SOName = SOName;
+        this.relativePosition = relativePosition;
+        this.codon = codon;
+        this.aaChange = aaChange;
     }
 
     public void setSOName(String SOName) {
