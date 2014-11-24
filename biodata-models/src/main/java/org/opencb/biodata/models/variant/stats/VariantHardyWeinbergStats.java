@@ -23,6 +23,37 @@ public class VariantHardyWeinbergStats {
         pValue = Float.MAX_VALUE;
     }
 
+    public VariantHardyWeinbergStats(float chi2, float pValue, int n, int n_AA, int n_Aa, int n_aa, float e_AA, float e_Aa, float e_aa, float p, float q) {
+        this.chi2 = chi2;
+        this.pValue = pValue;
+        this.n = n;
+        this.n_AA = n_AA;
+        this.n_Aa = n_Aa;
+        this.n_aa = n_aa;
+        this.e_AA = e_AA;
+        this.e_Aa = e_Aa;
+        this.e_aa = e_aa;
+        this.p = p;
+        this.q = q;
+    }
+
+    @Override
+    public String toString() {
+        return "VariantHardyWeinbergStats{" +
+                "chi2=" + chi2 +
+                ", pValue=" + pValue +
+                ", n=" + n +
+                ", n_AA=" + n_AA +
+                ", n_Aa=" + n_Aa +
+                ", n_aa=" + n_aa +
+                ", e_AA=" + e_AA +
+                ", e_Aa=" + e_Aa +
+                ", e_aa=" + e_aa +
+                ", p=" + p +
+                ", q=" + q +
+                '}';
+    }
+
     public float getChi2() {
         if (chi2 == Float.MAX_VALUE) {
             calculate();
@@ -91,6 +122,34 @@ public class VariantHardyWeinbergStats {
 
     public void setQ(float q) {
         this.q = q;
+    }
+
+    public int getN() {
+        return n;
+    }
+
+    public int getN_AA() {
+        return n_AA;
+    }
+
+    public int getN_Aa() {
+        return n_Aa;
+    }
+
+    public int getN_aa() {
+        return n_aa;
+    }
+
+    public float getE_AA() {
+        return e_AA;
+    }
+
+    public float getE_Aa() {
+        return e_Aa;
+    }
+
+    public float getE_aa() {
+        return e_aa;
     }
 
     public void calculate() {

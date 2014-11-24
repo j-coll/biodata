@@ -3,10 +3,7 @@ package org.opencb.biodata.models.variant.annotation;
 
 import org.opencb.biodata.models.feature.Gene;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 
 /**
@@ -57,7 +54,10 @@ public class VariantAnnotation {
     }
 
     public VariantAnnotation(String chromosome, int start, int end, String referenceAllele, String alternativeAllele) {
-        this(chromosome, start, end, referenceAllele, alternativeAllele, null, null, null, null, null, null, null, null, null, null, null);
+        this(chromosome, start, end, referenceAllele, alternativeAllele, "", new LinkedList<Xref>(), new LinkedList<String>(),
+                new LinkedList<ConsequenceType>(), new LinkedList<Score>(), new LinkedList<Score>(), new LinkedList<Frequency>(),
+                new LinkedList<CaddScore>(), new LinkedList<ExpressionValue>(), new HashMap<String, Object>(),
+                new HashMap<String, String>());
     }
 
     public VariantAnnotation(String chromosome, int start, int end, String referenceAllele, String alternativeAllele,

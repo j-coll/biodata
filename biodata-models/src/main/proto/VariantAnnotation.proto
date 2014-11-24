@@ -1,0 +1,114 @@
+package org.opencb.biodata.models.variant.protobuf;
+
+//import "CommonTypes.proto";
+
+option java_outer_classname = "VariantAnnotationProtos";
+
+message Map{
+    message KeyValue {
+        required string key = 1;
+        required string value = 2;
+    }
+    repeated KeyValue entry = 1;
+}
+message RawMap{
+    message KeyValue {
+        required string key = 1;
+        required bytes value = 2;
+    }
+    repeated KeyValue entry = 1;
+}
+
+message XRef {
+    required string id                          = 1;
+    required string src                         = 2;
+}
+message ConsequenceType {
+    optional string gene_name                   = 1;
+    optional string ensemble_gene_id            = 2;
+    optional string ensemble_transcript_id      = 3;
+    optional int32 SO_accession                 = 4;
+    optional string SO_name                     = 5;
+    optional int32 relative_position            = 6;
+    optional string codon                       = 7;
+    optional string aa_change                   = 8;
+}
+message Score {
+    optional float score                        = 1;
+    optional string src                         = 2;
+    optional string version                     = 3;
+}
+message Frequency {
+    optional string study                       = 1;
+    optional string population                  = 2;
+    optional string super_population            = 3;
+    optional float frequency                    = 4;
+}
+message CaddScore {
+    optional string transcript_id               = 1;
+    optional float c_score                      = 2;
+    optional float raw_score                    = 3;
+}
+message ExpressionValue {
+    optional string tissue_name                 = 1;
+    optional string experiment                  = 2;
+    optional float value                        = 3;
+}
+message VariantAnnotation {
+
+    required string chromosome                      = 1;
+    required int32 start                            = 2;
+    required int32 end                              = 3;
+    required string reference_allele                = 4;
+    required string alternative_allele              = 5;
+
+    optional string id                              = 6;
+
+    repeated XRef xrefs                             = 7;
+    repeated string hgvs                            = 8;
+    repeated ConsequenceType consequence_types      = 9;
+    repeated Score conserved_region_scores          = 10;
+    repeated Score protein_substitution_scores      = 11;
+    repeated Frequency populationFrequencies        = 12;
+    repeated CaddScore cadd_scores                  = 13;
+    repeated ExpressionValue expression_values      = 14;
+
+    optional RawMap clinical_data                   = 15;
+    optional Map additional_attributes              = 16;
+
+}
+
+
+
+/*
+message VariantAnnotation_old {
+    message Gene {//TODO
+    }
+    message VariantEffect {//TODO
+    }
+    message Frequency {//TODO
+    }
+    message ProteinSubstitutionScores {//TODO
+    }
+    message RegulatoryEffect {//TODO
+    }
+    message KeyVariantEffecetList {
+        required string key = 1;
+        repeated VariantEffect value = 2;
+    }
+    message KeyFrequencySet {
+        required string key = 1;
+        repeated Frequency value= 2;
+    }
+
+    required string chromosome = 9;
+    required int32 start = 1;
+    required int32 end  = 2;
+    required string referenceAllele = 3;
+    repeated Gene genes = 4;
+    repeated KeyVariantEffecetList effects = 5;
+    repeated KeyFrequencySet frequencies = 6;
+    required ProteinSubstitutionScores proteinSubstitutionScores = 7;
+    required RegulatoryEffect regulatoryEffect = 8;
+}
+*/

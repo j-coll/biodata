@@ -36,6 +36,7 @@ public class VariantStats {
     private float refAlleleFreq;
     private float altAlleleFreq;
     private Map<Genotype, Float> genotypesFreq;
+
     private float maf;
     private float mgf;
     private String mafAllele;
@@ -97,6 +98,38 @@ public class VariantStats {
         this.quality = -1;
 
         this.hw = new VariantHardyWeinbergStats();
+    }
+
+    public VariantStats(String refAllele, String altAllele, Variant.VariantType variantType, int refAlleleCount,
+                        int altAlleleCount, Map<Genotype, Integer> genotypesCount, int missingAlleles,
+                        int missingGenotypes, float refAlleleFreq, float altAlleleFreq, Map<Genotype, Float> genotypesFreq,
+                        float maf, float mgf, String mafAllele, String mgfGenotype, boolean passedFilters, int mendelianErrors,
+                        float casesPercentDominant, float controlsPercentDominant, float casesPercentRecessive,
+                        float controlsPercentRecessive, float quality, int numSamples, VariantHardyWeinbergStats hw) {
+        this.refAllele = refAllele;
+        this.altAllele = altAllele;
+        this.variantType = variantType;
+        this.refAlleleCount = refAlleleCount;
+        this.altAlleleCount = altAlleleCount;
+        this.genotypesCount = genotypesCount;
+        this.missingAlleles = missingAlleles;
+        this.missingGenotypes = missingGenotypes;
+        this.refAlleleFreq = refAlleleFreq;
+        this.altAlleleFreq = altAlleleFreq;
+        this.genotypesFreq = genotypesFreq;
+        this.maf = maf;
+        this.mgf = mgf;
+        this.mafAllele = mafAllele;
+        this.mgfGenotype = mgfGenotype;
+        this.passedFilters = passedFilters;
+        this.mendelianErrors = mendelianErrors;
+        this.casesPercentDominant = casesPercentDominant;
+        this.controlsPercentDominant = controlsPercentDominant;
+        this.casesPercentRecessive = casesPercentRecessive;
+        this.controlsPercentRecessive = controlsPercentRecessive;
+        this.quality = quality;
+        this.numSamples = numSamples;
+        this.hw = hw;
     }
 
     public String getRefAllele() {
@@ -351,23 +384,53 @@ public class VariantStats {
         this.numSamples = numSamples;
     }
 
+//    @Override
+//    public String toString() {
+//        return "VariantStats{"
+//                + "refAllele='" + refAllele + '\''
+//                + ", altAllele='" + altAllele + '\''
+//                + ", mafAllele='" + mafAllele + '\''
+//                + ", mgfAllele='" + mgfGenotype + '\''
+//                + ", maf=" + maf
+//                + ", mgf=" + mgf
+//                + ", missingAlleles=" + missingAlleles
+//                + ", missingGenotypes=" + missingGenotypes
+//                + ", mendelinanErrors=" + mendelianErrors
+//                + ", casesPercentDominant=" + casesPercentDominant
+//                + ", controlsPercentDominant=" + controlsPercentDominant
+//                + ", casesPercentRecessive=" + casesPercentRecessive
+//                + ", controlsPercentRecessive=" + controlsPercentRecessive
+//                + '}';
+//    }
+
     @Override
     public String toString() {
-        return "VariantStats{"
-                + "refAllele='" + refAllele + '\''
-                + ", altAllele='" + altAllele + '\''
-                + ", mafAllele='" + mafAllele + '\''
-                + ", mgfAllele='" + mgfGenotype + '\''
-                + ", maf=" + maf
-                + ", mgf=" + mgf
-                + ", missingAlleles=" + missingAlleles
-                + ", missingGenotypes=" + missingGenotypes
-                + ", mendelinanErrors=" + mendelianErrors
-                + ", casesPercentDominant=" + casesPercentDominant
-                + ", controlsPercentDominant=" + controlsPercentDominant
-                + ", casesPercentRecessive=" + casesPercentRecessive
-                + ", controlsPercentRecessive=" + controlsPercentRecessive
-                + '}';
+        return "VariantStats{" +
+                "refAllele='" + refAllele + '\'' +
+                ", altAllele='" + altAllele + '\'' +
+                ", variantType=" + variantType +
+                ", refAlleleCount=" + refAlleleCount +
+                ", altAlleleCount=" + altAlleleCount +
+                ", genotypesCount=" + genotypesCount +
+                ", missingAlleles=" + missingAlleles +
+                ", missingGenotypes=" + missingGenotypes +
+                ", refAlleleFreq=" + refAlleleFreq +
+                ", altAlleleFreq=" + altAlleleFreq +
+                ", genotypesFreq=" + genotypesFreq +
+                ", maf=" + maf +
+                ", mgf=" + mgf +
+                ", mafAllele='" + mafAllele + '\'' +
+                ", mgfGenotype='" + mgfGenotype + '\'' +
+                ", passedFilters=" + passedFilters +
+                ", mendelianErrors=" + mendelianErrors +
+                ", casesPercentDominant=" + casesPercentDominant +
+                ", controlsPercentDominant=" + controlsPercentDominant +
+                ", casesPercentRecessive=" + casesPercentRecessive +
+                ", controlsPercentRecessive=" + controlsPercentRecessive +
+                ", quality=" + quality +
+                ", numSamples=" + numSamples +
+                ", hw=" + hw +
+                '}';
     }
 
     public VariantStats calculate(Map<String, Map<String, String>> samplesData, Map<String, String> attributes, Pedigree pedigree) {

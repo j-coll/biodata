@@ -8,8 +8,2831 @@ public final class VariantStatsProtos {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
+  /**
+   * Protobuf enum {@code org.opencb.biodata.models.variant.protobuf.AllelesCode}
+   */
+  public enum AllelesCode
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>ALLELES_OK = 1;</code>
+     */
+    ALLELES_OK(0, 1),
+    /**
+     * <code>ALLELES_MISSING = 2;</code>
+     */
+    ALLELES_MISSING(1, 2),
+    /**
+     * <code>MULTIPLE_ALTERNATES = 3;</code>
+     */
+    MULTIPLE_ALTERNATES(2, 3),
+    /**
+     * <code>HAPLOID = 4;</code>
+     *
+     * <pre>
+     *    FIRST_ALLELE_MISSING,
+     *    SECOND_ALLELE_MISSING,
+     *    ALL_ALLELES_MISSING,
+     * </pre>
+     */
+    HAPLOID(3, 4),
+    ;
+
+    /**
+     * <code>ALLELES_OK = 1;</code>
+     */
+    public static final int ALLELES_OK_VALUE = 1;
+    /**
+     * <code>ALLELES_MISSING = 2;</code>
+     */
+    public static final int ALLELES_MISSING_VALUE = 2;
+    /**
+     * <code>MULTIPLE_ALTERNATES = 3;</code>
+     */
+    public static final int MULTIPLE_ALTERNATES_VALUE = 3;
+    /**
+     * <code>HAPLOID = 4;</code>
+     *
+     * <pre>
+     *    FIRST_ALLELE_MISSING,
+     *    SECOND_ALLELE_MISSING,
+     *    ALL_ALLELES_MISSING,
+     * </pre>
+     */
+    public static final int HAPLOID_VALUE = 4;
+
+
+    public final int getNumber() { return value; }
+
+    public static AllelesCode valueOf(int value) {
+      switch (value) {
+        case 1: return ALLELES_OK;
+        case 2: return ALLELES_MISSING;
+        case 3: return MULTIPLE_ALTERNATES;
+        case 4: return HAPLOID;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<AllelesCode>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<AllelesCode>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<AllelesCode>() {
+            public AllelesCode findValueByNumber(int number) {
+              return AllelesCode.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final AllelesCode[] VALUES = values();
+
+    public static AllelesCode valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private AllelesCode(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:org.opencb.biodata.models.variant.protobuf.AllelesCode)
+  }
+
+  /**
+   * Protobuf enum {@code org.opencb.biodata.models.variant.protobuf.VariantType}
+   */
+  public enum VariantType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>SNV = 0;</code>
+     */
+    SNV(0, 0),
+    /**
+     * <code>MNV = 1;</code>
+     */
+    MNV(1, 1),
+    /**
+     * <code>INDEL = 2;</code>
+     */
+    INDEL(2, 2),
+    /**
+     * <code>SV = 3;</code>
+     */
+    SV(3, 3),
+    /**
+     * <code>CNV = 4;</code>
+     */
+    CNV(4, 4),
+    ;
+
+    /**
+     * <code>SNV = 0;</code>
+     */
+    public static final int SNV_VALUE = 0;
+    /**
+     * <code>MNV = 1;</code>
+     */
+    public static final int MNV_VALUE = 1;
+    /**
+     * <code>INDEL = 2;</code>
+     */
+    public static final int INDEL_VALUE = 2;
+    /**
+     * <code>SV = 3;</code>
+     */
+    public static final int SV_VALUE = 3;
+    /**
+     * <code>CNV = 4;</code>
+     */
+    public static final int CNV_VALUE = 4;
+
+
+    public final int getNumber() { return value; }
+
+    public static VariantType valueOf(int value) {
+      switch (value) {
+        case 0: return SNV;
+        case 1: return MNV;
+        case 2: return INDEL;
+        case 3: return SV;
+        case 4: return CNV;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<VariantType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<VariantType>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<VariantType>() {
+            public VariantType findValueByNumber(int number) {
+              return VariantType.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final VariantType[] VALUES = values();
+
+    public static VariantType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private VariantType(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:org.opencb.biodata.models.variant.protobuf.VariantType)
+  }
+
+  public interface GenotypeOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required string reference = 1;
+    /**
+     * <code>required string reference = 1;</code>
+     */
+    boolean hasReference();
+    /**
+     * <code>required string reference = 1;</code>
+     */
+    java.lang.String getReference();
+    /**
+     * <code>required string reference = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getReferenceBytes();
+
+    // required string alternate = 2;
+    /**
+     * <code>required string alternate = 2;</code>
+     */
+    boolean hasAlternate();
+    /**
+     * <code>required string alternate = 2;</code>
+     */
+    java.lang.String getAlternate();
+    /**
+     * <code>required string alternate = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getAlternateBytes();
+
+    // repeated int32 alleles_idx = 3;
+    /**
+     * <code>repeated int32 alleles_idx = 3;</code>
+     */
+    java.util.List<java.lang.Integer> getAllelesIdxList();
+    /**
+     * <code>repeated int32 alleles_idx = 3;</code>
+     */
+    int getAllelesIdxCount();
+    /**
+     * <code>repeated int32 alleles_idx = 3;</code>
+     */
+    int getAllelesIdx(int index);
+
+    // required bool phased = 4;
+    /**
+     * <code>required bool phased = 4;</code>
+     */
+    boolean hasPhased();
+    /**
+     * <code>required bool phased = 4;</code>
+     */
+    boolean getPhased();
+
+    // required .org.opencb.biodata.models.variant.protobuf.AllelesCode code = 5;
+    /**
+     * <code>required .org.opencb.biodata.models.variant.protobuf.AllelesCode code = 5;</code>
+     */
+    boolean hasCode();
+    /**
+     * <code>required .org.opencb.biodata.models.variant.protobuf.AllelesCode code = 5;</code>
+     */
+    org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.AllelesCode getCode();
+
+    // required int32 count = 6;
+    /**
+     * <code>required int32 count = 6;</code>
+     */
+    boolean hasCount();
+    /**
+     * <code>required int32 count = 6;</code>
+     */
+    int getCount();
+  }
+  /**
+   * Protobuf type {@code org.opencb.biodata.models.variant.protobuf.Genotype}
+   */
+  public static final class Genotype extends
+      com.google.protobuf.GeneratedMessage
+      implements GenotypeOrBuilder {
+    // Use Genotype.newBuilder() to construct.
+    private Genotype(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Genotype(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Genotype defaultInstance;
+    public static Genotype getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Genotype getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Genotype(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              bitField0_ |= 0x00000001;
+              reference_ = input.readBytes();
+              break;
+            }
+            case 18: {
+              bitField0_ |= 0x00000002;
+              alternate_ = input.readBytes();
+              break;
+            }
+            case 24: {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                allelesIdx_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              allelesIdx_.add(input.readInt32());
+              break;
+            }
+            case 26: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004) && input.getBytesUntilLimit() > 0) {
+                allelesIdx_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                allelesIdx_.add(input.readInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000004;
+              phased_ = input.readBool();
+              break;
+            }
+            case 40: {
+              int rawValue = input.readEnum();
+              org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.AllelesCode value = org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.AllelesCode.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(5, rawValue);
+              } else {
+                bitField0_ |= 0x00000008;
+                code_ = value;
+              }
+              break;
+            }
+            case 48: {
+              bitField0_ |= 0x00000010;
+              count_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+          allelesIdx_ = java.util.Collections.unmodifiableList(allelesIdx_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.internal_static_org_opencb_biodata_models_variant_protobuf_Genotype_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.internal_static_org_opencb_biodata_models_variant_protobuf_Genotype_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype.class, org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Genotype> PARSER =
+        new com.google.protobuf.AbstractParser<Genotype>() {
+      public Genotype parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Genotype(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Genotype> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // required string reference = 1;
+    public static final int REFERENCE_FIELD_NUMBER = 1;
+    private java.lang.Object reference_;
+    /**
+     * <code>required string reference = 1;</code>
+     */
+    public boolean hasReference() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required string reference = 1;</code>
+     */
+    public java.lang.String getReference() {
+      java.lang.Object ref = reference_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          reference_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string reference = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getReferenceBytes() {
+      java.lang.Object ref = reference_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        reference_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    // required string alternate = 2;
+    public static final int ALTERNATE_FIELD_NUMBER = 2;
+    private java.lang.Object alternate_;
+    /**
+     * <code>required string alternate = 2;</code>
+     */
+    public boolean hasAlternate() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required string alternate = 2;</code>
+     */
+    public java.lang.String getAlternate() {
+      java.lang.Object ref = alternate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          alternate_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string alternate = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getAlternateBytes() {
+      java.lang.Object ref = alternate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        alternate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    // repeated int32 alleles_idx = 3;
+    public static final int ALLELES_IDX_FIELD_NUMBER = 3;
+    private java.util.List<java.lang.Integer> allelesIdx_;
+    /**
+     * <code>repeated int32 alleles_idx = 3;</code>
+     */
+    public java.util.List<java.lang.Integer>
+        getAllelesIdxList() {
+      return allelesIdx_;
+    }
+    /**
+     * <code>repeated int32 alleles_idx = 3;</code>
+     */
+    public int getAllelesIdxCount() {
+      return allelesIdx_.size();
+    }
+    /**
+     * <code>repeated int32 alleles_idx = 3;</code>
+     */
+    public int getAllelesIdx(int index) {
+      return allelesIdx_.get(index);
+    }
+
+    // required bool phased = 4;
+    public static final int PHASED_FIELD_NUMBER = 4;
+    private boolean phased_;
+    /**
+     * <code>required bool phased = 4;</code>
+     */
+    public boolean hasPhased() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>required bool phased = 4;</code>
+     */
+    public boolean getPhased() {
+      return phased_;
+    }
+
+    // required .org.opencb.biodata.models.variant.protobuf.AllelesCode code = 5;
+    public static final int CODE_FIELD_NUMBER = 5;
+    private org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.AllelesCode code_;
+    /**
+     * <code>required .org.opencb.biodata.models.variant.protobuf.AllelesCode code = 5;</code>
+     */
+    public boolean hasCode() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>required .org.opencb.biodata.models.variant.protobuf.AllelesCode code = 5;</code>
+     */
+    public org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.AllelesCode getCode() {
+      return code_;
+    }
+
+    // required int32 count = 6;
+    public static final int COUNT_FIELD_NUMBER = 6;
+    private int count_;
+    /**
+     * <code>required int32 count = 6;</code>
+     */
+    public boolean hasCount() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>required int32 count = 6;</code>
+     */
+    public int getCount() {
+      return count_;
+    }
+
+    private void initFields() {
+      reference_ = "";
+      alternate_ = "";
+      allelesIdx_ = java.util.Collections.emptyList();
+      phased_ = false;
+      code_ = org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.AllelesCode.ALLELES_OK;
+      count_ = 0;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (!hasReference()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasAlternate()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasPhased()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasCode()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasCount()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBytes(1, getReferenceBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, getAlternateBytes());
+      }
+      for (int i = 0; i < allelesIdx_.size(); i++) {
+        output.writeInt32(3, allelesIdx_.get(i));
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeBool(4, phased_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeEnum(5, code_.getNumber());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeInt32(6, count_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getReferenceBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getAlternateBytes());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < allelesIdx_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(allelesIdx_.get(i));
+        }
+        size += dataSize;
+        size += 1 * getAllelesIdxList().size();
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, phased_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(5, code_.getNumber());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(6, count_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code org.opencb.biodata.models.variant.protobuf.Genotype}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.GenotypeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.internal_static_org_opencb_biodata_models_variant_protobuf_Genotype_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.internal_static_org_opencb_biodata_models_variant_protobuf_Genotype_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype.class, org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype.Builder.class);
+      }
+
+      // Construct using org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        reference_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        alternate_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        allelesIdx_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        phased_ = false;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        code_ = org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.AllelesCode.ALLELES_OK;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        count_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.internal_static_org_opencb_biodata_models_variant_protobuf_Genotype_descriptor;
+      }
+
+      public org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype getDefaultInstanceForType() {
+        return org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype.getDefaultInstance();
+      }
+
+      public org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype build() {
+        org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype buildPartial() {
+        org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype result = new org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.reference_ = reference_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.alternate_ = alternate_;
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          allelesIdx_ = java.util.Collections.unmodifiableList(allelesIdx_);
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.allelesIdx_ = allelesIdx_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.phased_ = phased_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.code_ = code_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.count_ = count_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype) {
+          return mergeFrom((org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype other) {
+        if (other == org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype.getDefaultInstance()) return this;
+        if (other.hasReference()) {
+          bitField0_ |= 0x00000001;
+          reference_ = other.reference_;
+          onChanged();
+        }
+        if (other.hasAlternate()) {
+          bitField0_ |= 0x00000002;
+          alternate_ = other.alternate_;
+          onChanged();
+        }
+        if (!other.allelesIdx_.isEmpty()) {
+          if (allelesIdx_.isEmpty()) {
+            allelesIdx_ = other.allelesIdx_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureAllelesIdxIsMutable();
+            allelesIdx_.addAll(other.allelesIdx_);
+          }
+          onChanged();
+        }
+        if (other.hasPhased()) {
+          setPhased(other.getPhased());
+        }
+        if (other.hasCode()) {
+          setCode(other.getCode());
+        }
+        if (other.hasCount()) {
+          setCount(other.getCount());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasReference()) {
+          
+          return false;
+        }
+        if (!hasAlternate()) {
+          
+          return false;
+        }
+        if (!hasPhased()) {
+          
+          return false;
+        }
+        if (!hasCode()) {
+          
+          return false;
+        }
+        if (!hasCount()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // required string reference = 1;
+      private java.lang.Object reference_ = "";
+      /**
+       * <code>required string reference = 1;</code>
+       */
+      public boolean hasReference() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required string reference = 1;</code>
+       */
+      public java.lang.String getReference() {
+        java.lang.Object ref = reference_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          reference_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string reference = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getReferenceBytes() {
+        java.lang.Object ref = reference_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          reference_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string reference = 1;</code>
+       */
+      public Builder setReference(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        reference_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string reference = 1;</code>
+       */
+      public Builder clearReference() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        reference_ = getDefaultInstance().getReference();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string reference = 1;</code>
+       */
+      public Builder setReferenceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        reference_ = value;
+        onChanged();
+        return this;
+      }
+
+      // required string alternate = 2;
+      private java.lang.Object alternate_ = "";
+      /**
+       * <code>required string alternate = 2;</code>
+       */
+      public boolean hasAlternate() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required string alternate = 2;</code>
+       */
+      public java.lang.String getAlternate() {
+        java.lang.Object ref = alternate_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          alternate_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string alternate = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getAlternateBytes() {
+        java.lang.Object ref = alternate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          alternate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string alternate = 2;</code>
+       */
+      public Builder setAlternate(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        alternate_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string alternate = 2;</code>
+       */
+      public Builder clearAlternate() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        alternate_ = getDefaultInstance().getAlternate();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string alternate = 2;</code>
+       */
+      public Builder setAlternateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        alternate_ = value;
+        onChanged();
+        return this;
+      }
+
+      // repeated int32 alleles_idx = 3;
+      private java.util.List<java.lang.Integer> allelesIdx_ = java.util.Collections.emptyList();
+      private void ensureAllelesIdxIsMutable() {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+          allelesIdx_ = new java.util.ArrayList<java.lang.Integer>(allelesIdx_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+      /**
+       * <code>repeated int32 alleles_idx = 3;</code>
+       */
+      public java.util.List<java.lang.Integer>
+          getAllelesIdxList() {
+        return java.util.Collections.unmodifiableList(allelesIdx_);
+      }
+      /**
+       * <code>repeated int32 alleles_idx = 3;</code>
+       */
+      public int getAllelesIdxCount() {
+        return allelesIdx_.size();
+      }
+      /**
+       * <code>repeated int32 alleles_idx = 3;</code>
+       */
+      public int getAllelesIdx(int index) {
+        return allelesIdx_.get(index);
+      }
+      /**
+       * <code>repeated int32 alleles_idx = 3;</code>
+       */
+      public Builder setAllelesIdx(
+          int index, int value) {
+        ensureAllelesIdxIsMutable();
+        allelesIdx_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 alleles_idx = 3;</code>
+       */
+      public Builder addAllelesIdx(int value) {
+        ensureAllelesIdxIsMutable();
+        allelesIdx_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 alleles_idx = 3;</code>
+       */
+      public Builder addAllAllelesIdx(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureAllelesIdxIsMutable();
+        super.addAll(values, allelesIdx_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 alleles_idx = 3;</code>
+       */
+      public Builder clearAllelesIdx() {
+        allelesIdx_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+
+      // required bool phased = 4;
+      private boolean phased_ ;
+      /**
+       * <code>required bool phased = 4;</code>
+       */
+      public boolean hasPhased() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>required bool phased = 4;</code>
+       */
+      public boolean getPhased() {
+        return phased_;
+      }
+      /**
+       * <code>required bool phased = 4;</code>
+       */
+      public Builder setPhased(boolean value) {
+        bitField0_ |= 0x00000008;
+        phased_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required bool phased = 4;</code>
+       */
+      public Builder clearPhased() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        phased_ = false;
+        onChanged();
+        return this;
+      }
+
+      // required .org.opencb.biodata.models.variant.protobuf.AllelesCode code = 5;
+      private org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.AllelesCode code_ = org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.AllelesCode.ALLELES_OK;
+      /**
+       * <code>required .org.opencb.biodata.models.variant.protobuf.AllelesCode code = 5;</code>
+       */
+      public boolean hasCode() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>required .org.opencb.biodata.models.variant.protobuf.AllelesCode code = 5;</code>
+       */
+      public org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.AllelesCode getCode() {
+        return code_;
+      }
+      /**
+       * <code>required .org.opencb.biodata.models.variant.protobuf.AllelesCode code = 5;</code>
+       */
+      public Builder setCode(org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.AllelesCode value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000010;
+        code_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .org.opencb.biodata.models.variant.protobuf.AllelesCode code = 5;</code>
+       */
+      public Builder clearCode() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        code_ = org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.AllelesCode.ALLELES_OK;
+        onChanged();
+        return this;
+      }
+
+      // required int32 count = 6;
+      private int count_ ;
+      /**
+       * <code>required int32 count = 6;</code>
+       */
+      public boolean hasCount() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>required int32 count = 6;</code>
+       */
+      public int getCount() {
+        return count_;
+      }
+      /**
+       * <code>required int32 count = 6;</code>
+       */
+      public Builder setCount(int value) {
+        bitField0_ |= 0x00000020;
+        count_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 count = 6;</code>
+       */
+      public Builder clearCount() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        count_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:org.opencb.biodata.models.variant.protobuf.Genotype)
+    }
+
+    static {
+      defaultInstance = new Genotype(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:org.opencb.biodata.models.variant.protobuf.Genotype)
+  }
+
+  public interface VariantHardyWeinbergStatsOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required float chi2 = 1;
+    /**
+     * <code>required float chi2 = 1;</code>
+     */
+    boolean hasChi2();
+    /**
+     * <code>required float chi2 = 1;</code>
+     */
+    float getChi2();
+
+    // required float pValue = 2;
+    /**
+     * <code>required float pValue = 2;</code>
+     */
+    boolean hasPValue();
+    /**
+     * <code>required float pValue = 2;</code>
+     */
+    float getPValue();
+
+    // required int32 n = 3;
+    /**
+     * <code>required int32 n = 3;</code>
+     */
+    boolean hasN();
+    /**
+     * <code>required int32 n = 3;</code>
+     */
+    int getN();
+
+    // required int32 n_AA = 4;
+    /**
+     * <code>required int32 n_AA = 4;</code>
+     *
+     * <pre>
+     * n_AA 
+     * </pre>
+     */
+    boolean hasNAA();
+    /**
+     * <code>required int32 n_AA = 4;</code>
+     *
+     * <pre>
+     * n_AA 
+     * </pre>
+     */
+    int getNAA();
+
+    // required int32 n_Ala = 5;
+    /**
+     * <code>required int32 n_Ala = 5;</code>
+     *
+     * <pre>
+     * n_Aa 
+     * </pre>
+     */
+    boolean hasNAla();
+    /**
+     * <code>required int32 n_Ala = 5;</code>
+     *
+     * <pre>
+     * n_Aa 
+     * </pre>
+     */
+    int getNAla();
+
+    // required int32 n_lala = 6;
+    /**
+     * <code>required int32 n_lala = 6;</code>
+     *
+     * <pre>
+     * n_aa 
+     * </pre>
+     */
+    boolean hasNLala();
+    /**
+     * <code>required int32 n_lala = 6;</code>
+     *
+     * <pre>
+     * n_aa 
+     * </pre>
+     */
+    int getNLala();
+
+    // required float e_AA = 7;
+    /**
+     * <code>required float e_AA = 7;</code>
+     *
+     * <pre>
+     * e_AA 
+     * </pre>
+     */
+    boolean hasEAA();
+    /**
+     * <code>required float e_AA = 7;</code>
+     *
+     * <pre>
+     * e_AA 
+     * </pre>
+     */
+    float getEAA();
+
+    // required float e_Ala = 8;
+    /**
+     * <code>required float e_Ala = 8;</code>
+     *
+     * <pre>
+     * e_Aa 
+     * </pre>
+     */
+    boolean hasEAla();
+    /**
+     * <code>required float e_Ala = 8;</code>
+     *
+     * <pre>
+     * e_Aa 
+     * </pre>
+     */
+    float getEAla();
+
+    // required float e_lala = 9;
+    /**
+     * <code>required float e_lala = 9;</code>
+     *
+     * <pre>
+     * e_aa 
+     * </pre>
+     */
+    boolean hasELala();
+    /**
+     * <code>required float e_lala = 9;</code>
+     *
+     * <pre>
+     * e_aa 
+     * </pre>
+     */
+    float getELala();
+
+    // required float p = 10;
+    /**
+     * <code>required float p = 10;</code>
+     */
+    boolean hasP();
+    /**
+     * <code>required float p = 10;</code>
+     */
+    float getP();
+
+    // required float q = 11;
+    /**
+     * <code>required float q = 11;</code>
+     */
+    boolean hasQ();
+    /**
+     * <code>required float q = 11;</code>
+     */
+    float getQ();
+  }
+  /**
+   * Protobuf type {@code org.opencb.biodata.models.variant.protobuf.VariantHardyWeinbergStats}
+   */
+  public static final class VariantHardyWeinbergStats extends
+      com.google.protobuf.GeneratedMessage
+      implements VariantHardyWeinbergStatsOrBuilder {
+    // Use VariantHardyWeinbergStats.newBuilder() to construct.
+    private VariantHardyWeinbergStats(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private VariantHardyWeinbergStats(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final VariantHardyWeinbergStats defaultInstance;
+    public static VariantHardyWeinbergStats getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public VariantHardyWeinbergStats getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private VariantHardyWeinbergStats(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 13: {
+              bitField0_ |= 0x00000001;
+              chi2_ = input.readFloat();
+              break;
+            }
+            case 21: {
+              bitField0_ |= 0x00000002;
+              pValue_ = input.readFloat();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              n_ = input.readInt32();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              nAA_ = input.readInt32();
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000010;
+              nAla_ = input.readInt32();
+              break;
+            }
+            case 48: {
+              bitField0_ |= 0x00000020;
+              nLala_ = input.readInt32();
+              break;
+            }
+            case 61: {
+              bitField0_ |= 0x00000040;
+              eAA_ = input.readFloat();
+              break;
+            }
+            case 69: {
+              bitField0_ |= 0x00000080;
+              eAla_ = input.readFloat();
+              break;
+            }
+            case 77: {
+              bitField0_ |= 0x00000100;
+              eLala_ = input.readFloat();
+              break;
+            }
+            case 85: {
+              bitField0_ |= 0x00000200;
+              p_ = input.readFloat();
+              break;
+            }
+            case 93: {
+              bitField0_ |= 0x00000400;
+              q_ = input.readFloat();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.internal_static_org_opencb_biodata_models_variant_protobuf_VariantHardyWeinbergStats_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.internal_static_org_opencb_biodata_models_variant_protobuf_VariantHardyWeinbergStats_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats.class, org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<VariantHardyWeinbergStats> PARSER =
+        new com.google.protobuf.AbstractParser<VariantHardyWeinbergStats>() {
+      public VariantHardyWeinbergStats parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new VariantHardyWeinbergStats(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<VariantHardyWeinbergStats> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // required float chi2 = 1;
+    public static final int CHI2_FIELD_NUMBER = 1;
+    private float chi2_;
+    /**
+     * <code>required float chi2 = 1;</code>
+     */
+    public boolean hasChi2() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required float chi2 = 1;</code>
+     */
+    public float getChi2() {
+      return chi2_;
+    }
+
+    // required float pValue = 2;
+    public static final int PVALUE_FIELD_NUMBER = 2;
+    private float pValue_;
+    /**
+     * <code>required float pValue = 2;</code>
+     */
+    public boolean hasPValue() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required float pValue = 2;</code>
+     */
+    public float getPValue() {
+      return pValue_;
+    }
+
+    // required int32 n = 3;
+    public static final int N_FIELD_NUMBER = 3;
+    private int n_;
+    /**
+     * <code>required int32 n = 3;</code>
+     */
+    public boolean hasN() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>required int32 n = 3;</code>
+     */
+    public int getN() {
+      return n_;
+    }
+
+    // required int32 n_AA = 4;
+    public static final int N_AA_FIELD_NUMBER = 4;
+    private int nAA_;
+    /**
+     * <code>required int32 n_AA = 4;</code>
+     *
+     * <pre>
+     * n_AA 
+     * </pre>
+     */
+    public boolean hasNAA() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>required int32 n_AA = 4;</code>
+     *
+     * <pre>
+     * n_AA 
+     * </pre>
+     */
+    public int getNAA() {
+      return nAA_;
+    }
+
+    // required int32 n_Ala = 5;
+    public static final int N_ALA_FIELD_NUMBER = 5;
+    private int nAla_;
+    /**
+     * <code>required int32 n_Ala = 5;</code>
+     *
+     * <pre>
+     * n_Aa 
+     * </pre>
+     */
+    public boolean hasNAla() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>required int32 n_Ala = 5;</code>
+     *
+     * <pre>
+     * n_Aa 
+     * </pre>
+     */
+    public int getNAla() {
+      return nAla_;
+    }
+
+    // required int32 n_lala = 6;
+    public static final int N_LALA_FIELD_NUMBER = 6;
+    private int nLala_;
+    /**
+     * <code>required int32 n_lala = 6;</code>
+     *
+     * <pre>
+     * n_aa 
+     * </pre>
+     */
+    public boolean hasNLala() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>required int32 n_lala = 6;</code>
+     *
+     * <pre>
+     * n_aa 
+     * </pre>
+     */
+    public int getNLala() {
+      return nLala_;
+    }
+
+    // required float e_AA = 7;
+    public static final int E_AA_FIELD_NUMBER = 7;
+    private float eAA_;
+    /**
+     * <code>required float e_AA = 7;</code>
+     *
+     * <pre>
+     * e_AA 
+     * </pre>
+     */
+    public boolean hasEAA() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>required float e_AA = 7;</code>
+     *
+     * <pre>
+     * e_AA 
+     * </pre>
+     */
+    public float getEAA() {
+      return eAA_;
+    }
+
+    // required float e_Ala = 8;
+    public static final int E_ALA_FIELD_NUMBER = 8;
+    private float eAla_;
+    /**
+     * <code>required float e_Ala = 8;</code>
+     *
+     * <pre>
+     * e_Aa 
+     * </pre>
+     */
+    public boolean hasEAla() {
+      return ((bitField0_ & 0x00000080) == 0x00000080);
+    }
+    /**
+     * <code>required float e_Ala = 8;</code>
+     *
+     * <pre>
+     * e_Aa 
+     * </pre>
+     */
+    public float getEAla() {
+      return eAla_;
+    }
+
+    // required float e_lala = 9;
+    public static final int E_LALA_FIELD_NUMBER = 9;
+    private float eLala_;
+    /**
+     * <code>required float e_lala = 9;</code>
+     *
+     * <pre>
+     * e_aa 
+     * </pre>
+     */
+    public boolean hasELala() {
+      return ((bitField0_ & 0x00000100) == 0x00000100);
+    }
+    /**
+     * <code>required float e_lala = 9;</code>
+     *
+     * <pre>
+     * e_aa 
+     * </pre>
+     */
+    public float getELala() {
+      return eLala_;
+    }
+
+    // required float p = 10;
+    public static final int P_FIELD_NUMBER = 10;
+    private float p_;
+    /**
+     * <code>required float p = 10;</code>
+     */
+    public boolean hasP() {
+      return ((bitField0_ & 0x00000200) == 0x00000200);
+    }
+    /**
+     * <code>required float p = 10;</code>
+     */
+    public float getP() {
+      return p_;
+    }
+
+    // required float q = 11;
+    public static final int Q_FIELD_NUMBER = 11;
+    private float q_;
+    /**
+     * <code>required float q = 11;</code>
+     */
+    public boolean hasQ() {
+      return ((bitField0_ & 0x00000400) == 0x00000400);
+    }
+    /**
+     * <code>required float q = 11;</code>
+     */
+    public float getQ() {
+      return q_;
+    }
+
+    private void initFields() {
+      chi2_ = 0F;
+      pValue_ = 0F;
+      n_ = 0;
+      nAA_ = 0;
+      nAla_ = 0;
+      nLala_ = 0;
+      eAA_ = 0F;
+      eAla_ = 0F;
+      eLala_ = 0F;
+      p_ = 0F;
+      q_ = 0F;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (!hasChi2()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasPValue()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasN()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasNAA()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasNAla()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasNLala()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasEAA()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasEAla()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasELala()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasP()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasQ()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeFloat(1, chi2_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeFloat(2, pValue_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeInt32(3, n_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeInt32(4, nAA_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeInt32(5, nAla_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeInt32(6, nLala_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeFloat(7, eAA_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        output.writeFloat(8, eAla_);
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        output.writeFloat(9, eLala_);
+      }
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        output.writeFloat(10, p_);
+      }
+      if (((bitField0_ & 0x00000400) == 0x00000400)) {
+        output.writeFloat(11, q_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(1, chi2_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(2, pValue_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, n_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, nAA_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(5, nAla_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(6, nLala_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(7, eAA_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(8, eAla_);
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(9, eLala_);
+      }
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(10, p_);
+      }
+      if (((bitField0_ & 0x00000400) == 0x00000400)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(11, q_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code org.opencb.biodata.models.variant.protobuf.VariantHardyWeinbergStats}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStatsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.internal_static_org_opencb_biodata_models_variant_protobuf_VariantHardyWeinbergStats_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.internal_static_org_opencb_biodata_models_variant_protobuf_VariantHardyWeinbergStats_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats.class, org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats.Builder.class);
+      }
+
+      // Construct using org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        chi2_ = 0F;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pValue_ = 0F;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        n_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        nAA_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        nAla_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        nLala_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        eAA_ = 0F;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        eAla_ = 0F;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        eLala_ = 0F;
+        bitField0_ = (bitField0_ & ~0x00000100);
+        p_ = 0F;
+        bitField0_ = (bitField0_ & ~0x00000200);
+        q_ = 0F;
+        bitField0_ = (bitField0_ & ~0x00000400);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.internal_static_org_opencb_biodata_models_variant_protobuf_VariantHardyWeinbergStats_descriptor;
+      }
+
+      public org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats getDefaultInstanceForType() {
+        return org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats.getDefaultInstance();
+      }
+
+      public org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats build() {
+        org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats buildPartial() {
+        org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats result = new org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.chi2_ = chi2_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.pValue_ = pValue_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.n_ = n_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.nAA_ = nAA_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.nAla_ = nAla_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.nLala_ = nLala_;
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        result.eAA_ = eAA_;
+        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
+          to_bitField0_ |= 0x00000080;
+        }
+        result.eAla_ = eAla_;
+        if (((from_bitField0_ & 0x00000100) == 0x00000100)) {
+          to_bitField0_ |= 0x00000100;
+        }
+        result.eLala_ = eLala_;
+        if (((from_bitField0_ & 0x00000200) == 0x00000200)) {
+          to_bitField0_ |= 0x00000200;
+        }
+        result.p_ = p_;
+        if (((from_bitField0_ & 0x00000400) == 0x00000400)) {
+          to_bitField0_ |= 0x00000400;
+        }
+        result.q_ = q_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats) {
+          return mergeFrom((org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats other) {
+        if (other == org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats.getDefaultInstance()) return this;
+        if (other.hasChi2()) {
+          setChi2(other.getChi2());
+        }
+        if (other.hasPValue()) {
+          setPValue(other.getPValue());
+        }
+        if (other.hasN()) {
+          setN(other.getN());
+        }
+        if (other.hasNAA()) {
+          setNAA(other.getNAA());
+        }
+        if (other.hasNAla()) {
+          setNAla(other.getNAla());
+        }
+        if (other.hasNLala()) {
+          setNLala(other.getNLala());
+        }
+        if (other.hasEAA()) {
+          setEAA(other.getEAA());
+        }
+        if (other.hasEAla()) {
+          setEAla(other.getEAla());
+        }
+        if (other.hasELala()) {
+          setELala(other.getELala());
+        }
+        if (other.hasP()) {
+          setP(other.getP());
+        }
+        if (other.hasQ()) {
+          setQ(other.getQ());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasChi2()) {
+          
+          return false;
+        }
+        if (!hasPValue()) {
+          
+          return false;
+        }
+        if (!hasN()) {
+          
+          return false;
+        }
+        if (!hasNAA()) {
+          
+          return false;
+        }
+        if (!hasNAla()) {
+          
+          return false;
+        }
+        if (!hasNLala()) {
+          
+          return false;
+        }
+        if (!hasEAA()) {
+          
+          return false;
+        }
+        if (!hasEAla()) {
+          
+          return false;
+        }
+        if (!hasELala()) {
+          
+          return false;
+        }
+        if (!hasP()) {
+          
+          return false;
+        }
+        if (!hasQ()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // required float chi2 = 1;
+      private float chi2_ ;
+      /**
+       * <code>required float chi2 = 1;</code>
+       */
+      public boolean hasChi2() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required float chi2 = 1;</code>
+       */
+      public float getChi2() {
+        return chi2_;
+      }
+      /**
+       * <code>required float chi2 = 1;</code>
+       */
+      public Builder setChi2(float value) {
+        bitField0_ |= 0x00000001;
+        chi2_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required float chi2 = 1;</code>
+       */
+      public Builder clearChi2() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        chi2_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      // required float pValue = 2;
+      private float pValue_ ;
+      /**
+       * <code>required float pValue = 2;</code>
+       */
+      public boolean hasPValue() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required float pValue = 2;</code>
+       */
+      public float getPValue() {
+        return pValue_;
+      }
+      /**
+       * <code>required float pValue = 2;</code>
+       */
+      public Builder setPValue(float value) {
+        bitField0_ |= 0x00000002;
+        pValue_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required float pValue = 2;</code>
+       */
+      public Builder clearPValue() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pValue_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      // required int32 n = 3;
+      private int n_ ;
+      /**
+       * <code>required int32 n = 3;</code>
+       */
+      public boolean hasN() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>required int32 n = 3;</code>
+       */
+      public int getN() {
+        return n_;
+      }
+      /**
+       * <code>required int32 n = 3;</code>
+       */
+      public Builder setN(int value) {
+        bitField0_ |= 0x00000004;
+        n_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 n = 3;</code>
+       */
+      public Builder clearN() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        n_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // required int32 n_AA = 4;
+      private int nAA_ ;
+      /**
+       * <code>required int32 n_AA = 4;</code>
+       *
+       * <pre>
+       * n_AA 
+       * </pre>
+       */
+      public boolean hasNAA() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>required int32 n_AA = 4;</code>
+       *
+       * <pre>
+       * n_AA 
+       * </pre>
+       */
+      public int getNAA() {
+        return nAA_;
+      }
+      /**
+       * <code>required int32 n_AA = 4;</code>
+       *
+       * <pre>
+       * n_AA 
+       * </pre>
+       */
+      public Builder setNAA(int value) {
+        bitField0_ |= 0x00000008;
+        nAA_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 n_AA = 4;</code>
+       *
+       * <pre>
+       * n_AA 
+       * </pre>
+       */
+      public Builder clearNAA() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        nAA_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // required int32 n_Ala = 5;
+      private int nAla_ ;
+      /**
+       * <code>required int32 n_Ala = 5;</code>
+       *
+       * <pre>
+       * n_Aa 
+       * </pre>
+       */
+      public boolean hasNAla() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>required int32 n_Ala = 5;</code>
+       *
+       * <pre>
+       * n_Aa 
+       * </pre>
+       */
+      public int getNAla() {
+        return nAla_;
+      }
+      /**
+       * <code>required int32 n_Ala = 5;</code>
+       *
+       * <pre>
+       * n_Aa 
+       * </pre>
+       */
+      public Builder setNAla(int value) {
+        bitField0_ |= 0x00000010;
+        nAla_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 n_Ala = 5;</code>
+       *
+       * <pre>
+       * n_Aa 
+       * </pre>
+       */
+      public Builder clearNAla() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        nAla_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // required int32 n_lala = 6;
+      private int nLala_ ;
+      /**
+       * <code>required int32 n_lala = 6;</code>
+       *
+       * <pre>
+       * n_aa 
+       * </pre>
+       */
+      public boolean hasNLala() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>required int32 n_lala = 6;</code>
+       *
+       * <pre>
+       * n_aa 
+       * </pre>
+       */
+      public int getNLala() {
+        return nLala_;
+      }
+      /**
+       * <code>required int32 n_lala = 6;</code>
+       *
+       * <pre>
+       * n_aa 
+       * </pre>
+       */
+      public Builder setNLala(int value) {
+        bitField0_ |= 0x00000020;
+        nLala_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 n_lala = 6;</code>
+       *
+       * <pre>
+       * n_aa 
+       * </pre>
+       */
+      public Builder clearNLala() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        nLala_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // required float e_AA = 7;
+      private float eAA_ ;
+      /**
+       * <code>required float e_AA = 7;</code>
+       *
+       * <pre>
+       * e_AA 
+       * </pre>
+       */
+      public boolean hasEAA() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>required float e_AA = 7;</code>
+       *
+       * <pre>
+       * e_AA 
+       * </pre>
+       */
+      public float getEAA() {
+        return eAA_;
+      }
+      /**
+       * <code>required float e_AA = 7;</code>
+       *
+       * <pre>
+       * e_AA 
+       * </pre>
+       */
+      public Builder setEAA(float value) {
+        bitField0_ |= 0x00000040;
+        eAA_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required float e_AA = 7;</code>
+       *
+       * <pre>
+       * e_AA 
+       * </pre>
+       */
+      public Builder clearEAA() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        eAA_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      // required float e_Ala = 8;
+      private float eAla_ ;
+      /**
+       * <code>required float e_Ala = 8;</code>
+       *
+       * <pre>
+       * e_Aa 
+       * </pre>
+       */
+      public boolean hasEAla() {
+        return ((bitField0_ & 0x00000080) == 0x00000080);
+      }
+      /**
+       * <code>required float e_Ala = 8;</code>
+       *
+       * <pre>
+       * e_Aa 
+       * </pre>
+       */
+      public float getEAla() {
+        return eAla_;
+      }
+      /**
+       * <code>required float e_Ala = 8;</code>
+       *
+       * <pre>
+       * e_Aa 
+       * </pre>
+       */
+      public Builder setEAla(float value) {
+        bitField0_ |= 0x00000080;
+        eAla_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required float e_Ala = 8;</code>
+       *
+       * <pre>
+       * e_Aa 
+       * </pre>
+       */
+      public Builder clearEAla() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        eAla_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      // required float e_lala = 9;
+      private float eLala_ ;
+      /**
+       * <code>required float e_lala = 9;</code>
+       *
+       * <pre>
+       * e_aa 
+       * </pre>
+       */
+      public boolean hasELala() {
+        return ((bitField0_ & 0x00000100) == 0x00000100);
+      }
+      /**
+       * <code>required float e_lala = 9;</code>
+       *
+       * <pre>
+       * e_aa 
+       * </pre>
+       */
+      public float getELala() {
+        return eLala_;
+      }
+      /**
+       * <code>required float e_lala = 9;</code>
+       *
+       * <pre>
+       * e_aa 
+       * </pre>
+       */
+      public Builder setELala(float value) {
+        bitField0_ |= 0x00000100;
+        eLala_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required float e_lala = 9;</code>
+       *
+       * <pre>
+       * e_aa 
+       * </pre>
+       */
+      public Builder clearELala() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        eLala_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      // required float p = 10;
+      private float p_ ;
+      /**
+       * <code>required float p = 10;</code>
+       */
+      public boolean hasP() {
+        return ((bitField0_ & 0x00000200) == 0x00000200);
+      }
+      /**
+       * <code>required float p = 10;</code>
+       */
+      public float getP() {
+        return p_;
+      }
+      /**
+       * <code>required float p = 10;</code>
+       */
+      public Builder setP(float value) {
+        bitField0_ |= 0x00000200;
+        p_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required float p = 10;</code>
+       */
+      public Builder clearP() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        p_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      // required float q = 11;
+      private float q_ ;
+      /**
+       * <code>required float q = 11;</code>
+       */
+      public boolean hasQ() {
+        return ((bitField0_ & 0x00000400) == 0x00000400);
+      }
+      /**
+       * <code>required float q = 11;</code>
+       */
+      public float getQ() {
+        return q_;
+      }
+      /**
+       * <code>required float q = 11;</code>
+       */
+      public Builder setQ(float value) {
+        bitField0_ |= 0x00000400;
+        q_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required float q = 11;</code>
+       */
+      public Builder clearQ() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        q_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:org.opencb.biodata.models.variant.protobuf.VariantHardyWeinbergStats)
+    }
+
+    static {
+      defaultInstance = new VariantHardyWeinbergStats(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:org.opencb.biodata.models.variant.protobuf.VariantHardyWeinbergStats)
+  }
+
   public interface VariantStatsOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
+
+    // required string ref_allele = 24;
+    /**
+     * <code>required string ref_allele = 24;</code>
+     */
+    boolean hasRefAllele();
+    /**
+     * <code>required string ref_allele = 24;</code>
+     */
+    java.lang.String getRefAllele();
+    /**
+     * <code>required string ref_allele = 24;</code>
+     */
+    com.google.protobuf.ByteString
+        getRefAlleleBytes();
+
+    // required string alt_allele = 25;
+    /**
+     * <code>required string alt_allele = 25;</code>
+     */
+    boolean hasAltAllele();
+    /**
+     * <code>required string alt_allele = 25;</code>
+     */
+    java.lang.String getAltAllele();
+    /**
+     * <code>required string alt_allele = 25;</code>
+     */
+    com.google.protobuf.ByteString
+        getAltAlleleBytes();
+
+    // required .org.opencb.biodata.models.variant.protobuf.VariantType type = 26;
+    /**
+     * <code>required .org.opencb.biodata.models.variant.protobuf.VariantType type = 26;</code>
+     */
+    boolean hasType();
+    /**
+     * <code>required .org.opencb.biodata.models.variant.protobuf.VariantType type = 26;</code>
+     */
+    org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantType getType();
 
     // required int32 ref_allele_count = 1;
     /**
@@ -257,26 +3080,6 @@ public final class VariantStatsProtos {
      */
     int getNumSamples();
 
-    // required int32 transitions_count = 16;
-    /**
-     * <code>required int32 transitions_count = 16;</code>
-     */
-    boolean hasTransitionsCount();
-    /**
-     * <code>required int32 transitions_count = 16;</code>
-     */
-    int getTransitionsCount();
-
-    // required int32 transversions_count = 17;
-    /**
-     * <code>required int32 transversions_count = 17;</code>
-     */
-    boolean hasTransversionsCount();
-    /**
-     * <code>required int32 transversions_count = 17;</code>
-     */
-    int getTransversionsCount();
-
     // optional int32 mendelian_errors = 18;
     /**
      * <code>optional int32 mendelian_errors = 18;</code>
@@ -367,9 +3170,9 @@ public final class VariantStatsProtos {
      */
     float getControlsPercentRecessive();
 
-    // optional float hardy_weinberg = 23;
+    // optional .org.opencb.biodata.models.variant.protobuf.VariantHardyWeinbergStats hardy_weinberg = 23;
     /**
-     * <code>optional float hardy_weinberg = 23;</code>
+     * <code>optional .org.opencb.biodata.models.variant.protobuf.VariantHardyWeinbergStats hardy_weinberg = 23;</code>
      *
      * <pre>
      * All samples Hardy-Weinberg stats
@@ -377,13 +3180,21 @@ public final class VariantStatsProtos {
      */
     boolean hasHardyWeinberg();
     /**
-     * <code>optional float hardy_weinberg = 23;</code>
+     * <code>optional .org.opencb.biodata.models.variant.protobuf.VariantHardyWeinbergStats hardy_weinberg = 23;</code>
      *
      * <pre>
      * All samples Hardy-Weinberg stats
      * </pre>
      */
-    float getHardyWeinberg();
+    org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats getHardyWeinberg();
+    /**
+     * <code>optional .org.opencb.biodata.models.variant.protobuf.VariantHardyWeinbergStats hardy_weinberg = 23;</code>
+     *
+     * <pre>
+     * All samples Hardy-Weinberg stats
+     * </pre>
+     */
+    org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStatsOrBuilder getHardyWeinbergOrBuilder();
   }
   /**
    * Protobuf type {@code org.opencb.biodata.models.variant.protobuf.VariantStats}
@@ -437,124 +3248,143 @@ public final class VariantStatsProtos {
               break;
             }
             case 8: {
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000008;
               refAlleleCount_ = input.readInt32();
               break;
             }
             case 16: {
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000010;
               altAlleleCount_ = input.readInt32();
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
                 genotypesCount_ = new java.util.ArrayList<org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantStats.Count>();
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000020;
               }
               genotypesCount_.add(input.readMessage(org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantStats.Count.PARSER, extensionRegistry));
               break;
             }
             case 37: {
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000020;
               refAlleleFreq_ = input.readFloat();
               break;
             }
             case 45: {
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000040;
               altAlleleFreq_ = input.readFloat();
               break;
             }
             case 50: {
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
                 genotypesFreq_ = new java.util.ArrayList<org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantStats.Frequency>();
-                mutable_bitField0_ |= 0x00000020;
+                mutable_bitField0_ |= 0x00000100;
               }
               genotypesFreq_.add(input.readMessage(org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantStats.Frequency.PARSER, extensionRegistry));
               break;
             }
             case 56: {
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000080;
               missingAlleles_ = input.readInt32();
               break;
             }
             case 64: {
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000100;
               missingGenotypes_ = input.readInt32();
               break;
             }
             case 77: {
-              bitField0_ |= 0x00000040;
+              bitField0_ |= 0x00000200;
               maf_ = input.readFloat();
               break;
             }
             case 85: {
-              bitField0_ |= 0x00000080;
+              bitField0_ |= 0x00000400;
               mgf_ = input.readFloat();
               break;
             }
             case 90: {
-              bitField0_ |= 0x00000100;
+              bitField0_ |= 0x00000800;
               mafAllele_ = input.readBytes();
               break;
             }
             case 98: {
-              bitField0_ |= 0x00000200;
+              bitField0_ |= 0x00001000;
               mgfGenotype_ = input.readBytes();
               break;
             }
             case 104: {
-              bitField0_ |= 0x00000400;
+              bitField0_ |= 0x00002000;
               passedFilters_ = input.readBool();
               break;
             }
             case 117: {
-              bitField0_ |= 0x00000800;
+              bitField0_ |= 0x00004000;
               quality_ = input.readFloat();
               break;
             }
             case 120: {
-              bitField0_ |= 0x00001000;
+              bitField0_ |= 0x00008000;
               numSamples_ = input.readInt32();
               break;
             }
-            case 128: {
-              bitField0_ |= 0x00002000;
-              transitionsCount_ = input.readInt32();
-              break;
-            }
-            case 136: {
-              bitField0_ |= 0x00004000;
-              transversionsCount_ = input.readInt32();
-              break;
-            }
             case 144: {
-              bitField0_ |= 0x00008000;
+              bitField0_ |= 0x00010000;
               mendelianErrors_ = input.readInt32();
               break;
             }
             case 157: {
-              bitField0_ |= 0x00010000;
+              bitField0_ |= 0x00020000;
               casesPercentDominant_ = input.readFloat();
               break;
             }
             case 165: {
-              bitField0_ |= 0x00020000;
+              bitField0_ |= 0x00040000;
               controlsPercentDominant_ = input.readFloat();
               break;
             }
             case 173: {
-              bitField0_ |= 0x00040000;
+              bitField0_ |= 0x00080000;
               casesPercentRecessive_ = input.readFloat();
               break;
             }
             case 181: {
-              bitField0_ |= 0x00080000;
+              bitField0_ |= 0x00100000;
               controlsPercentRecessive_ = input.readFloat();
               break;
             }
-            case 189: {
-              bitField0_ |= 0x00100000;
-              hardyWeinberg_ = input.readFloat();
+            case 186: {
+              org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats.Builder subBuilder = null;
+              if (((bitField0_ & 0x00200000) == 0x00200000)) {
+                subBuilder = hardyWeinberg_.toBuilder();
+              }
+              hardyWeinberg_ = input.readMessage(org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(hardyWeinberg_);
+                hardyWeinberg_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00200000;
+              break;
+            }
+            case 194: {
+              bitField0_ |= 0x00000001;
+              refAllele_ = input.readBytes();
+              break;
+            }
+            case 202: {
+              bitField0_ |= 0x00000002;
+              altAllele_ = input.readBytes();
+              break;
+            }
+            case 208: {
+              int rawValue = input.readEnum();
+              org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantType value = org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(26, rawValue);
+              } else {
+                bitField0_ |= 0x00000004;
+                type_ = value;
+              }
               break;
             }
           }
@@ -565,10 +3395,10 @@ public final class VariantStatsProtos {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
           genotypesCount_ = java.util.Collections.unmodifiableList(genotypesCount_);
         }
-        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
           genotypesFreq_ = java.util.Collections.unmodifiableList(genotypesFreq_);
         }
         this.unknownFields = unknownFields.build();
@@ -605,9 +3435,9 @@ public final class VariantStatsProtos {
     public interface CountOrBuilder
         extends com.google.protobuf.MessageOrBuilder {
 
-      // required string key = 1;
+      // required .org.opencb.biodata.models.variant.protobuf.Genotype key = 1;
       /**
-       * <code>required string key = 1;</code>
+       * <code>required .org.opencb.biodata.models.variant.protobuf.Genotype key = 1;</code>
        *
        * <pre>
        * Key of the pair 
@@ -615,22 +3445,21 @@ public final class VariantStatsProtos {
        */
       boolean hasKey();
       /**
-       * <code>required string key = 1;</code>
+       * <code>required .org.opencb.biodata.models.variant.protobuf.Genotype key = 1;</code>
        *
        * <pre>
        * Key of the pair 
        * </pre>
        */
-      java.lang.String getKey();
+      org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype getKey();
       /**
-       * <code>required string key = 1;</code>
+       * <code>required .org.opencb.biodata.models.variant.protobuf.Genotype key = 1;</code>
        *
        * <pre>
        * Key of the pair 
        * </pre>
        */
-      com.google.protobuf.ByteString
-          getKeyBytes();
+      org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.GenotypeOrBuilder getKeyOrBuilder();
 
       // required int32 count = 2;
       /**
@@ -702,8 +3531,16 @@ public final class VariantStatsProtos {
                 break;
               }
               case 10: {
+                org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype.Builder subBuilder = null;
+                if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                  subBuilder = key_.toBuilder();
+                }
+                key_ = input.readMessage(org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype.PARSER, extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(key_);
+                  key_ = subBuilder.buildPartial();
+                }
                 bitField0_ |= 0x00000001;
-                key_ = input.readBytes();
                 break;
               }
               case 16: {
@@ -751,11 +3588,11 @@ public final class VariantStatsProtos {
       }
 
       private int bitField0_;
-      // required string key = 1;
+      // required .org.opencb.biodata.models.variant.protobuf.Genotype key = 1;
       public static final int KEY_FIELD_NUMBER = 1;
-      private java.lang.Object key_;
+      private org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype key_;
       /**
-       * <code>required string key = 1;</code>
+       * <code>required .org.opencb.biodata.models.variant.protobuf.Genotype key = 1;</code>
        *
        * <pre>
        * Key of the pair 
@@ -765,45 +3602,24 @@ public final class VariantStatsProtos {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required string key = 1;</code>
+       * <code>required .org.opencb.biodata.models.variant.protobuf.Genotype key = 1;</code>
        *
        * <pre>
        * Key of the pair 
        * </pre>
        */
-      public java.lang.String getKey() {
-        java.lang.Object ref = key_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            key_ = s;
-          }
-          return s;
-        }
+      public org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype getKey() {
+        return key_;
       }
       /**
-       * <code>required string key = 1;</code>
+       * <code>required .org.opencb.biodata.models.variant.protobuf.Genotype key = 1;</code>
        *
        * <pre>
        * Key of the pair 
        * </pre>
        */
-      public com.google.protobuf.ByteString
-          getKeyBytes() {
-        java.lang.Object ref = key_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          key_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+      public org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.GenotypeOrBuilder getKeyOrBuilder() {
+        return key_;
       }
 
       // required int32 count = 2;
@@ -831,7 +3647,7 @@ public final class VariantStatsProtos {
       }
 
       private void initFields() {
-        key_ = "";
+        key_ = org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype.getDefaultInstance();
         count_ = 0;
       }
       private byte memoizedIsInitialized = -1;
@@ -847,6 +3663,10 @@ public final class VariantStatsProtos {
           memoizedIsInitialized = 0;
           return false;
         }
+        if (!getKey().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
         memoizedIsInitialized = 1;
         return true;
       }
@@ -855,7 +3675,7 @@ public final class VariantStatsProtos {
                           throws java.io.IOException {
         getSerializedSize();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          output.writeBytes(1, getKeyBytes());
+          output.writeMessage(1, key_);
         }
         if (((bitField0_ & 0x00000002) == 0x00000002)) {
           output.writeInt32(2, count_);
@@ -871,7 +3691,7 @@ public final class VariantStatsProtos {
         size = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
           size += com.google.protobuf.CodedOutputStream
-            .computeBytesSize(1, getKeyBytes());
+            .computeMessageSize(1, key_);
         }
         if (((bitField0_ & 0x00000002) == 0x00000002)) {
           size += com.google.protobuf.CodedOutputStream
@@ -985,6 +3805,7 @@ public final class VariantStatsProtos {
         }
         private void maybeForceBuilderInitialization() {
           if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+            getKeyFieldBuilder();
           }
         }
         private static Builder create() {
@@ -993,7 +3814,11 @@ public final class VariantStatsProtos {
 
         public Builder clear() {
           super.clear();
-          key_ = "";
+          if (keyBuilder_ == null) {
+            key_ = org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype.getDefaultInstance();
+          } else {
+            keyBuilder_.clear();
+          }
           bitField0_ = (bitField0_ & ~0x00000001);
           count_ = 0;
           bitField0_ = (bitField0_ & ~0x00000002);
@@ -1028,7 +3853,11 @@ public final class VariantStatsProtos {
           if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
             to_bitField0_ |= 0x00000001;
           }
-          result.key_ = key_;
+          if (keyBuilder_ == null) {
+            result.key_ = key_;
+          } else {
+            result.key_ = keyBuilder_.build();
+          }
           if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
             to_bitField0_ |= 0x00000002;
           }
@@ -1050,9 +3879,7 @@ public final class VariantStatsProtos {
         public Builder mergeFrom(org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantStats.Count other) {
           if (other == org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantStats.Count.getDefaultInstance()) return this;
           if (other.hasKey()) {
-            bitField0_ |= 0x00000001;
-            key_ = other.key_;
-            onChanged();
+            mergeKey(other.getKey());
           }
           if (other.hasCount()) {
             setCount(other.getCount());
@@ -1067,6 +3894,10 @@ public final class VariantStatsProtos {
             return false;
           }
           if (!hasCount()) {
+            
+            return false;
+          }
+          if (!getKey().isInitialized()) {
             
             return false;
           }
@@ -1092,10 +3923,12 @@ public final class VariantStatsProtos {
         }
         private int bitField0_;
 
-        // required string key = 1;
-        private java.lang.Object key_ = "";
+        // required .org.opencb.biodata.models.variant.protobuf.Genotype key = 1;
+        private org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype key_ = org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype.getDefaultInstance();
+        private com.google.protobuf.SingleFieldBuilder<
+            org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype, org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype.Builder, org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.GenotypeOrBuilder> keyBuilder_;
         /**
-         * <code>required string key = 1;</code>
+         * <code>required .org.opencb.biodata.models.variant.protobuf.Genotype key = 1;</code>
          *
          * <pre>
          * Key of the pair 
@@ -1105,89 +3938,142 @@ public final class VariantStatsProtos {
           return ((bitField0_ & 0x00000001) == 0x00000001);
         }
         /**
-         * <code>required string key = 1;</code>
+         * <code>required .org.opencb.biodata.models.variant.protobuf.Genotype key = 1;</code>
          *
          * <pre>
          * Key of the pair 
          * </pre>
          */
-        public java.lang.String getKey() {
-          java.lang.Object ref = key_;
-          if (!(ref instanceof java.lang.String)) {
-            java.lang.String s = ((com.google.protobuf.ByteString) ref)
-                .toStringUtf8();
-            key_ = s;
-            return s;
+        public org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype getKey() {
+          if (keyBuilder_ == null) {
+            return key_;
           } else {
-            return (java.lang.String) ref;
+            return keyBuilder_.getMessage();
           }
         }
         /**
-         * <code>required string key = 1;</code>
+         * <code>required .org.opencb.biodata.models.variant.protobuf.Genotype key = 1;</code>
          *
          * <pre>
          * Key of the pair 
          * </pre>
          */
-        public com.google.protobuf.ByteString
-            getKeyBytes() {
-          java.lang.Object ref = key_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            key_ = b;
-            return b;
+        public Builder setKey(org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype value) {
+          if (keyBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            key_ = value;
+            onChanged();
           } else {
-            return (com.google.protobuf.ByteString) ref;
+            keyBuilder_.setMessage(value);
           }
+          bitField0_ |= 0x00000001;
+          return this;
         }
         /**
-         * <code>required string key = 1;</code>
+         * <code>required .org.opencb.biodata.models.variant.protobuf.Genotype key = 1;</code>
          *
          * <pre>
          * Key of the pair 
          * </pre>
          */
         public Builder setKey(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-          key_ = value;
-          onChanged();
+            org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype.Builder builderForValue) {
+          if (keyBuilder_ == null) {
+            key_ = builderForValue.build();
+            onChanged();
+          } else {
+            keyBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000001;
           return this;
         }
         /**
-         * <code>required string key = 1;</code>
+         * <code>required .org.opencb.biodata.models.variant.protobuf.Genotype key = 1;</code>
+         *
+         * <pre>
+         * Key of the pair 
+         * </pre>
+         */
+        public Builder mergeKey(org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype value) {
+          if (keyBuilder_ == null) {
+            if (((bitField0_ & 0x00000001) == 0x00000001) &&
+                key_ != org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype.getDefaultInstance()) {
+              key_ =
+                org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype.newBuilder(key_).mergeFrom(value).buildPartial();
+            } else {
+              key_ = value;
+            }
+            onChanged();
+          } else {
+            keyBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000001;
+          return this;
+        }
+        /**
+         * <code>required .org.opencb.biodata.models.variant.protobuf.Genotype key = 1;</code>
          *
          * <pre>
          * Key of the pair 
          * </pre>
          */
         public Builder clearKey() {
+          if (keyBuilder_ == null) {
+            key_ = org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype.getDefaultInstance();
+            onChanged();
+          } else {
+            keyBuilder_.clear();
+          }
           bitField0_ = (bitField0_ & ~0x00000001);
-          key_ = getDefaultInstance().getKey();
-          onChanged();
           return this;
         }
         /**
-         * <code>required string key = 1;</code>
+         * <code>required .org.opencb.biodata.models.variant.protobuf.Genotype key = 1;</code>
          *
          * <pre>
          * Key of the pair 
          * </pre>
          */
-        public Builder setKeyBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-          key_ = value;
+        public org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype.Builder getKeyBuilder() {
+          bitField0_ |= 0x00000001;
           onChanged();
-          return this;
+          return getKeyFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>required .org.opencb.biodata.models.variant.protobuf.Genotype key = 1;</code>
+         *
+         * <pre>
+         * Key of the pair 
+         * </pre>
+         */
+        public org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.GenotypeOrBuilder getKeyOrBuilder() {
+          if (keyBuilder_ != null) {
+            return keyBuilder_.getMessageOrBuilder();
+          } else {
+            return key_;
+          }
+        }
+        /**
+         * <code>required .org.opencb.biodata.models.variant.protobuf.Genotype key = 1;</code>
+         *
+         * <pre>
+         * Key of the pair 
+         * </pre>
+         */
+        private com.google.protobuf.SingleFieldBuilder<
+            org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype, org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype.Builder, org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.GenotypeOrBuilder> 
+            getKeyFieldBuilder() {
+          if (keyBuilder_ == null) {
+            keyBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+                org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype, org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype.Builder, org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.GenotypeOrBuilder>(
+                    key_,
+                    getParentForChildren(),
+                    isClean());
+            key_ = null;
+          }
+          return keyBuilder_;
         }
 
         // required int32 count = 2;
@@ -1253,9 +4139,9 @@ public final class VariantStatsProtos {
     public interface FrequencyOrBuilder
         extends com.google.protobuf.MessageOrBuilder {
 
-      // required string key = 1;
+      // required .org.opencb.biodata.models.variant.protobuf.Genotype key = 1;
       /**
-       * <code>required string key = 1;</code>
+       * <code>required .org.opencb.biodata.models.variant.protobuf.Genotype key = 1;</code>
        *
        * <pre>
        * Key of the pair 
@@ -1263,22 +4149,21 @@ public final class VariantStatsProtos {
        */
       boolean hasKey();
       /**
-       * <code>required string key = 1;</code>
+       * <code>required .org.opencb.biodata.models.variant.protobuf.Genotype key = 1;</code>
        *
        * <pre>
        * Key of the pair 
        * </pre>
        */
-      java.lang.String getKey();
+      org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype getKey();
       /**
-       * <code>required string key = 1;</code>
+       * <code>required .org.opencb.biodata.models.variant.protobuf.Genotype key = 1;</code>
        *
        * <pre>
        * Key of the pair 
        * </pre>
        */
-      com.google.protobuf.ByteString
-          getKeyBytes();
+      org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.GenotypeOrBuilder getKeyOrBuilder();
 
       // required float frequency = 2;
       /**
@@ -1350,8 +4235,16 @@ public final class VariantStatsProtos {
                 break;
               }
               case 10: {
+                org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype.Builder subBuilder = null;
+                if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                  subBuilder = key_.toBuilder();
+                }
+                key_ = input.readMessage(org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype.PARSER, extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(key_);
+                  key_ = subBuilder.buildPartial();
+                }
                 bitField0_ |= 0x00000001;
-                key_ = input.readBytes();
                 break;
               }
               case 21: {
@@ -1399,11 +4292,11 @@ public final class VariantStatsProtos {
       }
 
       private int bitField0_;
-      // required string key = 1;
+      // required .org.opencb.biodata.models.variant.protobuf.Genotype key = 1;
       public static final int KEY_FIELD_NUMBER = 1;
-      private java.lang.Object key_;
+      private org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype key_;
       /**
-       * <code>required string key = 1;</code>
+       * <code>required .org.opencb.biodata.models.variant.protobuf.Genotype key = 1;</code>
        *
        * <pre>
        * Key of the pair 
@@ -1413,45 +4306,24 @@ public final class VariantStatsProtos {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required string key = 1;</code>
+       * <code>required .org.opencb.biodata.models.variant.protobuf.Genotype key = 1;</code>
        *
        * <pre>
        * Key of the pair 
        * </pre>
        */
-      public java.lang.String getKey() {
-        java.lang.Object ref = key_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            key_ = s;
-          }
-          return s;
-        }
+      public org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype getKey() {
+        return key_;
       }
       /**
-       * <code>required string key = 1;</code>
+       * <code>required .org.opencb.biodata.models.variant.protobuf.Genotype key = 1;</code>
        *
        * <pre>
        * Key of the pair 
        * </pre>
        */
-      public com.google.protobuf.ByteString
-          getKeyBytes() {
-        java.lang.Object ref = key_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          key_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+      public org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.GenotypeOrBuilder getKeyOrBuilder() {
+        return key_;
       }
 
       // required float frequency = 2;
@@ -1479,7 +4351,7 @@ public final class VariantStatsProtos {
       }
 
       private void initFields() {
-        key_ = "";
+        key_ = org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype.getDefaultInstance();
         frequency_ = 0F;
       }
       private byte memoizedIsInitialized = -1;
@@ -1495,6 +4367,10 @@ public final class VariantStatsProtos {
           memoizedIsInitialized = 0;
           return false;
         }
+        if (!getKey().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
         memoizedIsInitialized = 1;
         return true;
       }
@@ -1503,7 +4379,7 @@ public final class VariantStatsProtos {
                           throws java.io.IOException {
         getSerializedSize();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          output.writeBytes(1, getKeyBytes());
+          output.writeMessage(1, key_);
         }
         if (((bitField0_ & 0x00000002) == 0x00000002)) {
           output.writeFloat(2, frequency_);
@@ -1519,7 +4395,7 @@ public final class VariantStatsProtos {
         size = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
           size += com.google.protobuf.CodedOutputStream
-            .computeBytesSize(1, getKeyBytes());
+            .computeMessageSize(1, key_);
         }
         if (((bitField0_ & 0x00000002) == 0x00000002)) {
           size += com.google.protobuf.CodedOutputStream
@@ -1633,6 +4509,7 @@ public final class VariantStatsProtos {
         }
         private void maybeForceBuilderInitialization() {
           if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+            getKeyFieldBuilder();
           }
         }
         private static Builder create() {
@@ -1641,7 +4518,11 @@ public final class VariantStatsProtos {
 
         public Builder clear() {
           super.clear();
-          key_ = "";
+          if (keyBuilder_ == null) {
+            key_ = org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype.getDefaultInstance();
+          } else {
+            keyBuilder_.clear();
+          }
           bitField0_ = (bitField0_ & ~0x00000001);
           frequency_ = 0F;
           bitField0_ = (bitField0_ & ~0x00000002);
@@ -1676,7 +4557,11 @@ public final class VariantStatsProtos {
           if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
             to_bitField0_ |= 0x00000001;
           }
-          result.key_ = key_;
+          if (keyBuilder_ == null) {
+            result.key_ = key_;
+          } else {
+            result.key_ = keyBuilder_.build();
+          }
           if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
             to_bitField0_ |= 0x00000002;
           }
@@ -1698,9 +4583,7 @@ public final class VariantStatsProtos {
         public Builder mergeFrom(org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantStats.Frequency other) {
           if (other == org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantStats.Frequency.getDefaultInstance()) return this;
           if (other.hasKey()) {
-            bitField0_ |= 0x00000001;
-            key_ = other.key_;
-            onChanged();
+            mergeKey(other.getKey());
           }
           if (other.hasFrequency()) {
             setFrequency(other.getFrequency());
@@ -1715,6 +4598,10 @@ public final class VariantStatsProtos {
             return false;
           }
           if (!hasFrequency()) {
+            
+            return false;
+          }
+          if (!getKey().isInitialized()) {
             
             return false;
           }
@@ -1740,10 +4627,12 @@ public final class VariantStatsProtos {
         }
         private int bitField0_;
 
-        // required string key = 1;
-        private java.lang.Object key_ = "";
+        // required .org.opencb.biodata.models.variant.protobuf.Genotype key = 1;
+        private org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype key_ = org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype.getDefaultInstance();
+        private com.google.protobuf.SingleFieldBuilder<
+            org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype, org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype.Builder, org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.GenotypeOrBuilder> keyBuilder_;
         /**
-         * <code>required string key = 1;</code>
+         * <code>required .org.opencb.biodata.models.variant.protobuf.Genotype key = 1;</code>
          *
          * <pre>
          * Key of the pair 
@@ -1753,89 +4642,142 @@ public final class VariantStatsProtos {
           return ((bitField0_ & 0x00000001) == 0x00000001);
         }
         /**
-         * <code>required string key = 1;</code>
+         * <code>required .org.opencb.biodata.models.variant.protobuf.Genotype key = 1;</code>
          *
          * <pre>
          * Key of the pair 
          * </pre>
          */
-        public java.lang.String getKey() {
-          java.lang.Object ref = key_;
-          if (!(ref instanceof java.lang.String)) {
-            java.lang.String s = ((com.google.protobuf.ByteString) ref)
-                .toStringUtf8();
-            key_ = s;
-            return s;
+        public org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype getKey() {
+          if (keyBuilder_ == null) {
+            return key_;
           } else {
-            return (java.lang.String) ref;
+            return keyBuilder_.getMessage();
           }
         }
         /**
-         * <code>required string key = 1;</code>
+         * <code>required .org.opencb.biodata.models.variant.protobuf.Genotype key = 1;</code>
          *
          * <pre>
          * Key of the pair 
          * </pre>
          */
-        public com.google.protobuf.ByteString
-            getKeyBytes() {
-          java.lang.Object ref = key_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            key_ = b;
-            return b;
+        public Builder setKey(org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype value) {
+          if (keyBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            key_ = value;
+            onChanged();
           } else {
-            return (com.google.protobuf.ByteString) ref;
+            keyBuilder_.setMessage(value);
           }
+          bitField0_ |= 0x00000001;
+          return this;
         }
         /**
-         * <code>required string key = 1;</code>
+         * <code>required .org.opencb.biodata.models.variant.protobuf.Genotype key = 1;</code>
          *
          * <pre>
          * Key of the pair 
          * </pre>
          */
         public Builder setKey(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-          key_ = value;
-          onChanged();
+            org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype.Builder builderForValue) {
+          if (keyBuilder_ == null) {
+            key_ = builderForValue.build();
+            onChanged();
+          } else {
+            keyBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000001;
           return this;
         }
         /**
-         * <code>required string key = 1;</code>
+         * <code>required .org.opencb.biodata.models.variant.protobuf.Genotype key = 1;</code>
+         *
+         * <pre>
+         * Key of the pair 
+         * </pre>
+         */
+        public Builder mergeKey(org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype value) {
+          if (keyBuilder_ == null) {
+            if (((bitField0_ & 0x00000001) == 0x00000001) &&
+                key_ != org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype.getDefaultInstance()) {
+              key_ =
+                org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype.newBuilder(key_).mergeFrom(value).buildPartial();
+            } else {
+              key_ = value;
+            }
+            onChanged();
+          } else {
+            keyBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000001;
+          return this;
+        }
+        /**
+         * <code>required .org.opencb.biodata.models.variant.protobuf.Genotype key = 1;</code>
          *
          * <pre>
          * Key of the pair 
          * </pre>
          */
         public Builder clearKey() {
+          if (keyBuilder_ == null) {
+            key_ = org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype.getDefaultInstance();
+            onChanged();
+          } else {
+            keyBuilder_.clear();
+          }
           bitField0_ = (bitField0_ & ~0x00000001);
-          key_ = getDefaultInstance().getKey();
-          onChanged();
           return this;
         }
         /**
-         * <code>required string key = 1;</code>
+         * <code>required .org.opencb.biodata.models.variant.protobuf.Genotype key = 1;</code>
          *
          * <pre>
          * Key of the pair 
          * </pre>
          */
-        public Builder setKeyBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-          key_ = value;
+        public org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype.Builder getKeyBuilder() {
+          bitField0_ |= 0x00000001;
           onChanged();
-          return this;
+          return getKeyFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>required .org.opencb.biodata.models.variant.protobuf.Genotype key = 1;</code>
+         *
+         * <pre>
+         * Key of the pair 
+         * </pre>
+         */
+        public org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.GenotypeOrBuilder getKeyOrBuilder() {
+          if (keyBuilder_ != null) {
+            return keyBuilder_.getMessageOrBuilder();
+          } else {
+            return key_;
+          }
+        }
+        /**
+         * <code>required .org.opencb.biodata.models.variant.protobuf.Genotype key = 1;</code>
+         *
+         * <pre>
+         * Key of the pair 
+         * </pre>
+         */
+        private com.google.protobuf.SingleFieldBuilder<
+            org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype, org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype.Builder, org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.GenotypeOrBuilder> 
+            getKeyFieldBuilder() {
+          if (keyBuilder_ == null) {
+            keyBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+                org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype, org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.Genotype.Builder, org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.GenotypeOrBuilder>(
+                    key_,
+                    getParentForChildren(),
+                    isClean());
+            key_ = null;
+          }
+          return keyBuilder_;
         }
 
         // required float frequency = 2;
@@ -1899,6 +4841,108 @@ public final class VariantStatsProtos {
     }
 
     private int bitField0_;
+    // required string ref_allele = 24;
+    public static final int REF_ALLELE_FIELD_NUMBER = 24;
+    private java.lang.Object refAllele_;
+    /**
+     * <code>required string ref_allele = 24;</code>
+     */
+    public boolean hasRefAllele() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required string ref_allele = 24;</code>
+     */
+    public java.lang.String getRefAllele() {
+      java.lang.Object ref = refAllele_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          refAllele_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string ref_allele = 24;</code>
+     */
+    public com.google.protobuf.ByteString
+        getRefAlleleBytes() {
+      java.lang.Object ref = refAllele_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        refAllele_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    // required string alt_allele = 25;
+    public static final int ALT_ALLELE_FIELD_NUMBER = 25;
+    private java.lang.Object altAllele_;
+    /**
+     * <code>required string alt_allele = 25;</code>
+     */
+    public boolean hasAltAllele() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required string alt_allele = 25;</code>
+     */
+    public java.lang.String getAltAllele() {
+      java.lang.Object ref = altAllele_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          altAllele_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string alt_allele = 25;</code>
+     */
+    public com.google.protobuf.ByteString
+        getAltAlleleBytes() {
+      java.lang.Object ref = altAllele_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        altAllele_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    // required .org.opencb.biodata.models.variant.protobuf.VariantType type = 26;
+    public static final int TYPE_FIELD_NUMBER = 26;
+    private org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantType type_;
+    /**
+     * <code>required .org.opencb.biodata.models.variant.protobuf.VariantType type = 26;</code>
+     */
+    public boolean hasType() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>required .org.opencb.biodata.models.variant.protobuf.VariantType type = 26;</code>
+     */
+    public org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantType getType() {
+      return type_;
+    }
+
     // required int32 ref_allele_count = 1;
     public static final int REF_ALLELE_COUNT_FIELD_NUMBER = 1;
     private int refAlleleCount_;
@@ -1906,7 +4950,7 @@ public final class VariantStatsProtos {
      * <code>required int32 ref_allele_count = 1;</code>
      */
     public boolean hasRefAlleleCount() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
+      return ((bitField0_ & 0x00000008) == 0x00000008);
     }
     /**
      * <code>required int32 ref_allele_count = 1;</code>
@@ -1922,7 +4966,7 @@ public final class VariantStatsProtos {
      * <code>required int32 alt_allele_count = 2;</code>
      */
     public boolean hasAltAlleleCount() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
+      return ((bitField0_ & 0x00000010) == 0x00000010);
     }
     /**
      * <code>required int32 alt_allele_count = 2;</code>
@@ -1974,7 +5018,7 @@ public final class VariantStatsProtos {
      * <code>required float ref_allele_freq = 4;</code>
      */
     public boolean hasRefAlleleFreq() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
+      return ((bitField0_ & 0x00000020) == 0x00000020);
     }
     /**
      * <code>required float ref_allele_freq = 4;</code>
@@ -1990,7 +5034,7 @@ public final class VariantStatsProtos {
      * <code>required float alt_allele_freq = 5;</code>
      */
     public boolean hasAltAlleleFreq() {
-      return ((bitField0_ & 0x00000008) == 0x00000008);
+      return ((bitField0_ & 0x00000040) == 0x00000040);
     }
     /**
      * <code>required float alt_allele_freq = 5;</code>
@@ -2046,7 +5090,7 @@ public final class VariantStatsProtos {
      * </pre>
      */
     public boolean hasMissingAlleles() {
-      return ((bitField0_ & 0x00000010) == 0x00000010);
+      return ((bitField0_ & 0x00000080) == 0x00000080);
     }
     /**
      * <code>required int32 missing_alleles = 7;</code>
@@ -2070,7 +5114,7 @@ public final class VariantStatsProtos {
      * </pre>
      */
     public boolean hasMissingGenotypes() {
-      return ((bitField0_ & 0x00000020) == 0x00000020);
+      return ((bitField0_ & 0x00000100) == 0x00000100);
     }
     /**
      * <code>required int32 missing_genotypes = 8;</code>
@@ -2094,7 +5138,7 @@ public final class VariantStatsProtos {
      * </pre>
      */
     public boolean hasMaf() {
-      return ((bitField0_ & 0x00000040) == 0x00000040);
+      return ((bitField0_ & 0x00000200) == 0x00000200);
     }
     /**
      * <code>required float maf = 9;</code>
@@ -2118,7 +5162,7 @@ public final class VariantStatsProtos {
      * </pre>
      */
     public boolean hasMgf() {
-      return ((bitField0_ & 0x00000080) == 0x00000080);
+      return ((bitField0_ & 0x00000400) == 0x00000400);
     }
     /**
      * <code>required float mgf = 10;</code>
@@ -2142,7 +5186,7 @@ public final class VariantStatsProtos {
      * </pre>
      */
     public boolean hasMafAllele() {
-      return ((bitField0_ & 0x00000100) == 0x00000100);
+      return ((bitField0_ & 0x00000800) == 0x00000800);
     }
     /**
      * <code>required string mafAllele = 11;</code>
@@ -2197,7 +5241,7 @@ public final class VariantStatsProtos {
      * </pre>
      */
     public boolean hasMgfGenotype() {
-      return ((bitField0_ & 0x00000200) == 0x00000200);
+      return ((bitField0_ & 0x00001000) == 0x00001000);
     }
     /**
      * <code>required string mgfGenotype = 12;</code>
@@ -2248,7 +5292,7 @@ public final class VariantStatsProtos {
      * <code>required bool passed_filters = 13;</code>
      */
     public boolean hasPassedFilters() {
-      return ((bitField0_ & 0x00000400) == 0x00000400);
+      return ((bitField0_ & 0x00002000) == 0x00002000);
     }
     /**
      * <code>required bool passed_filters = 13;</code>
@@ -2264,7 +5308,7 @@ public final class VariantStatsProtos {
      * <code>required float quality = 14;</code>
      */
     public boolean hasQuality() {
-      return ((bitField0_ & 0x00000800) == 0x00000800);
+      return ((bitField0_ & 0x00004000) == 0x00004000);
     }
     /**
      * <code>required float quality = 14;</code>
@@ -2280,45 +5324,13 @@ public final class VariantStatsProtos {
      * <code>required int32 num_samples = 15;</code>
      */
     public boolean hasNumSamples() {
-      return ((bitField0_ & 0x00001000) == 0x00001000);
+      return ((bitField0_ & 0x00008000) == 0x00008000);
     }
     /**
      * <code>required int32 num_samples = 15;</code>
      */
     public int getNumSamples() {
       return numSamples_;
-    }
-
-    // required int32 transitions_count = 16;
-    public static final int TRANSITIONS_COUNT_FIELD_NUMBER = 16;
-    private int transitionsCount_;
-    /**
-     * <code>required int32 transitions_count = 16;</code>
-     */
-    public boolean hasTransitionsCount() {
-      return ((bitField0_ & 0x00002000) == 0x00002000);
-    }
-    /**
-     * <code>required int32 transitions_count = 16;</code>
-     */
-    public int getTransitionsCount() {
-      return transitionsCount_;
-    }
-
-    // required int32 transversions_count = 17;
-    public static final int TRANSVERSIONS_COUNT_FIELD_NUMBER = 17;
-    private int transversionsCount_;
-    /**
-     * <code>required int32 transversions_count = 17;</code>
-     */
-    public boolean hasTransversionsCount() {
-      return ((bitField0_ & 0x00004000) == 0x00004000);
-    }
-    /**
-     * <code>required int32 transversions_count = 17;</code>
-     */
-    public int getTransversionsCount() {
-      return transversionsCount_;
     }
 
     // optional int32 mendelian_errors = 18;
@@ -2332,7 +5344,7 @@ public final class VariantStatsProtos {
      * </pre>
      */
     public boolean hasMendelianErrors() {
-      return ((bitField0_ & 0x00008000) == 0x00008000);
+      return ((bitField0_ & 0x00010000) == 0x00010000);
     }
     /**
      * <code>optional int32 mendelian_errors = 18;</code>
@@ -2356,7 +5368,7 @@ public final class VariantStatsProtos {
      * </pre>
      */
     public boolean hasCasesPercentDominant() {
-      return ((bitField0_ & 0x00010000) == 0x00010000);
+      return ((bitField0_ & 0x00020000) == 0x00020000);
     }
     /**
      * <code>optional float cases_percent_dominant = 19;</code>
@@ -2380,7 +5392,7 @@ public final class VariantStatsProtos {
      * </pre>
      */
     public boolean hasControlsPercentDominant() {
-      return ((bitField0_ & 0x00020000) == 0x00020000);
+      return ((bitField0_ & 0x00040000) == 0x00040000);
     }
     /**
      * <code>optional float controls_percent_dominant = 20;</code>
@@ -2404,7 +5416,7 @@ public final class VariantStatsProtos {
      * </pre>
      */
     public boolean hasCasesPercentRecessive() {
-      return ((bitField0_ & 0x00040000) == 0x00040000);
+      return ((bitField0_ & 0x00080000) == 0x00080000);
     }
     /**
      * <code>optional float cases_percent_recessive = 21;</code>
@@ -2428,7 +5440,7 @@ public final class VariantStatsProtos {
      * </pre>
      */
     public boolean hasControlsPercentRecessive() {
-      return ((bitField0_ & 0x00080000) == 0x00080000);
+      return ((bitField0_ & 0x00100000) == 0x00100000);
     }
     /**
      * <code>optional float controls_percent_recessive = 22;</code>
@@ -2441,31 +5453,44 @@ public final class VariantStatsProtos {
       return controlsPercentRecessive_;
     }
 
-    // optional float hardy_weinberg = 23;
+    // optional .org.opencb.biodata.models.variant.protobuf.VariantHardyWeinbergStats hardy_weinberg = 23;
     public static final int HARDY_WEINBERG_FIELD_NUMBER = 23;
-    private float hardyWeinberg_;
+    private org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats hardyWeinberg_;
     /**
-     * <code>optional float hardy_weinberg = 23;</code>
+     * <code>optional .org.opencb.biodata.models.variant.protobuf.VariantHardyWeinbergStats hardy_weinberg = 23;</code>
      *
      * <pre>
      * All samples Hardy-Weinberg stats
      * </pre>
      */
     public boolean hasHardyWeinberg() {
-      return ((bitField0_ & 0x00100000) == 0x00100000);
+      return ((bitField0_ & 0x00200000) == 0x00200000);
     }
     /**
-     * <code>optional float hardy_weinberg = 23;</code>
+     * <code>optional .org.opencb.biodata.models.variant.protobuf.VariantHardyWeinbergStats hardy_weinberg = 23;</code>
      *
      * <pre>
      * All samples Hardy-Weinberg stats
      * </pre>
      */
-    public float getHardyWeinberg() {
+    public org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats getHardyWeinberg() {
+      return hardyWeinberg_;
+    }
+    /**
+     * <code>optional .org.opencb.biodata.models.variant.protobuf.VariantHardyWeinbergStats hardy_weinberg = 23;</code>
+     *
+     * <pre>
+     * All samples Hardy-Weinberg stats
+     * </pre>
+     */
+    public org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStatsOrBuilder getHardyWeinbergOrBuilder() {
       return hardyWeinberg_;
     }
 
     private void initFields() {
+      refAllele_ = "";
+      altAllele_ = "";
+      type_ = org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantType.SNV;
       refAlleleCount_ = 0;
       altAlleleCount_ = 0;
       genotypesCount_ = java.util.Collections.emptyList();
@@ -2481,20 +5506,30 @@ public final class VariantStatsProtos {
       passedFilters_ = false;
       quality_ = 0F;
       numSamples_ = 0;
-      transitionsCount_ = 0;
-      transversionsCount_ = 0;
       mendelianErrors_ = 0;
       casesPercentDominant_ = 0F;
       controlsPercentDominant_ = 0F;
       casesPercentRecessive_ = 0F;
       controlsPercentRecessive_ = 0F;
-      hardyWeinberg_ = 0F;
+      hardyWeinberg_ = org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized != -1) return isInitialized == 1;
 
+      if (!hasRefAllele()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasAltAllele()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasType()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
       if (!hasRefAlleleCount()) {
         memoizedIsInitialized = 0;
         return false;
@@ -2547,14 +5582,6 @@ public final class VariantStatsProtos {
         memoizedIsInitialized = 0;
         return false;
       }
-      if (!hasTransitionsCount()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasTransversionsCount()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
       for (int i = 0; i < getGenotypesCountCount(); i++) {
         if (!getGenotypesCount(i).isInitialized()) {
           memoizedIsInitialized = 0;
@@ -2567,6 +5594,12 @@ public final class VariantStatsProtos {
           return false;
         }
       }
+      if (hasHardyWeinberg()) {
+        if (!getHardyWeinberg().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -2574,74 +5607,77 @@ public final class VariantStatsProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
         output.writeInt32(1, refAlleleCount_);
       }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
         output.writeInt32(2, altAlleleCount_);
       }
       for (int i = 0; i < genotypesCount_.size(); i++) {
         output.writeMessage(3, genotypesCount_.get(i));
       }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
         output.writeFloat(4, refAlleleFreq_);
       }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
         output.writeFloat(5, altAlleleFreq_);
       }
       for (int i = 0; i < genotypesFreq_.size(); i++) {
         output.writeMessage(6, genotypesFreq_.get(i));
       }
-      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
         output.writeInt32(7, missingAlleles_);
       }
-      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
         output.writeInt32(8, missingGenotypes_);
       }
-      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
         output.writeFloat(9, maf_);
       }
-      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+      if (((bitField0_ & 0x00000400) == 0x00000400)) {
         output.writeFloat(10, mgf_);
       }
-      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+      if (((bitField0_ & 0x00000800) == 0x00000800)) {
         output.writeBytes(11, getMafAlleleBytes());
       }
-      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+      if (((bitField0_ & 0x00001000) == 0x00001000)) {
         output.writeBytes(12, getMgfGenotypeBytes());
       }
-      if (((bitField0_ & 0x00000400) == 0x00000400)) {
+      if (((bitField0_ & 0x00002000) == 0x00002000)) {
         output.writeBool(13, passedFilters_);
       }
-      if (((bitField0_ & 0x00000800) == 0x00000800)) {
+      if (((bitField0_ & 0x00004000) == 0x00004000)) {
         output.writeFloat(14, quality_);
       }
-      if (((bitField0_ & 0x00001000) == 0x00001000)) {
+      if (((bitField0_ & 0x00008000) == 0x00008000)) {
         output.writeInt32(15, numSamples_);
       }
-      if (((bitField0_ & 0x00002000) == 0x00002000)) {
-        output.writeInt32(16, transitionsCount_);
-      }
-      if (((bitField0_ & 0x00004000) == 0x00004000)) {
-        output.writeInt32(17, transversionsCount_);
-      }
-      if (((bitField0_ & 0x00008000) == 0x00008000)) {
+      if (((bitField0_ & 0x00010000) == 0x00010000)) {
         output.writeInt32(18, mendelianErrors_);
       }
-      if (((bitField0_ & 0x00010000) == 0x00010000)) {
+      if (((bitField0_ & 0x00020000) == 0x00020000)) {
         output.writeFloat(19, casesPercentDominant_);
       }
-      if (((bitField0_ & 0x00020000) == 0x00020000)) {
+      if (((bitField0_ & 0x00040000) == 0x00040000)) {
         output.writeFloat(20, controlsPercentDominant_);
       }
-      if (((bitField0_ & 0x00040000) == 0x00040000)) {
+      if (((bitField0_ & 0x00080000) == 0x00080000)) {
         output.writeFloat(21, casesPercentRecessive_);
       }
-      if (((bitField0_ & 0x00080000) == 0x00080000)) {
+      if (((bitField0_ & 0x00100000) == 0x00100000)) {
         output.writeFloat(22, controlsPercentRecessive_);
       }
-      if (((bitField0_ & 0x00100000) == 0x00100000)) {
-        output.writeFloat(23, hardyWeinberg_);
+      if (((bitField0_ & 0x00200000) == 0x00200000)) {
+        output.writeMessage(23, hardyWeinberg_);
+      }
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBytes(24, getRefAlleleBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(25, getAltAlleleBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeEnum(26, type_.getNumber());
       }
       getUnknownFields().writeTo(output);
     }
@@ -2652,11 +5688,11 @@ public final class VariantStatsProtos {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(1, refAlleleCount_);
       }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(2, altAlleleCount_);
       }
@@ -2664,11 +5700,11 @@ public final class VariantStatsProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, genotypesCount_.get(i));
       }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(4, refAlleleFreq_);
       }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(5, altAlleleFreq_);
       }
@@ -2676,73 +5712,77 @@ public final class VariantStatsProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, genotypesFreq_.get(i));
       }
-      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(7, missingAlleles_);
       }
-      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(8, missingGenotypes_);
       }
-      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(9, maf_);
       }
-      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+      if (((bitField0_ & 0x00000400) == 0x00000400)) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(10, mgf_);
       }
-      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+      if (((bitField0_ & 0x00000800) == 0x00000800)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(11, getMafAlleleBytes());
       }
-      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+      if (((bitField0_ & 0x00001000) == 0x00001000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(12, getMgfGenotypeBytes());
       }
-      if (((bitField0_ & 0x00000400) == 0x00000400)) {
+      if (((bitField0_ & 0x00002000) == 0x00002000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(13, passedFilters_);
       }
-      if (((bitField0_ & 0x00000800) == 0x00000800)) {
+      if (((bitField0_ & 0x00004000) == 0x00004000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(14, quality_);
       }
-      if (((bitField0_ & 0x00001000) == 0x00001000)) {
+      if (((bitField0_ & 0x00008000) == 0x00008000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(15, numSamples_);
       }
-      if (((bitField0_ & 0x00002000) == 0x00002000)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(16, transitionsCount_);
-      }
-      if (((bitField0_ & 0x00004000) == 0x00004000)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(17, transversionsCount_);
-      }
-      if (((bitField0_ & 0x00008000) == 0x00008000)) {
+      if (((bitField0_ & 0x00010000) == 0x00010000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(18, mendelianErrors_);
       }
-      if (((bitField0_ & 0x00010000) == 0x00010000)) {
+      if (((bitField0_ & 0x00020000) == 0x00020000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(19, casesPercentDominant_);
       }
-      if (((bitField0_ & 0x00020000) == 0x00020000)) {
+      if (((bitField0_ & 0x00040000) == 0x00040000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(20, controlsPercentDominant_);
       }
-      if (((bitField0_ & 0x00040000) == 0x00040000)) {
+      if (((bitField0_ & 0x00080000) == 0x00080000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(21, casesPercentRecessive_);
       }
-      if (((bitField0_ & 0x00080000) == 0x00080000)) {
+      if (((bitField0_ & 0x00100000) == 0x00100000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(22, controlsPercentRecessive_);
       }
-      if (((bitField0_ & 0x00100000) == 0x00100000)) {
+      if (((bitField0_ & 0x00200000) == 0x00200000)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(23, hardyWeinberg_);
+          .computeMessageSize(23, hardyWeinberg_);
+      }
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(24, getRefAlleleBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(25, getAltAlleleBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(26, type_.getNumber());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -2854,6 +5894,7 @@ public final class VariantStatsProtos {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getGenotypesCountFieldBuilder();
           getGenotypesFreqFieldBuilder();
+          getHardyWeinbergFieldBuilder();
         }
       }
       private static Builder create() {
@@ -2862,60 +5903,66 @@ public final class VariantStatsProtos {
 
       public Builder clear() {
         super.clear();
-        refAlleleCount_ = 0;
+        refAllele_ = "";
         bitField0_ = (bitField0_ & ~0x00000001);
-        altAlleleCount_ = 0;
+        altAllele_ = "";
         bitField0_ = (bitField0_ & ~0x00000002);
+        type_ = org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantType.SNV;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        refAlleleCount_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        altAlleleCount_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000010);
         if (genotypesCountBuilder_ == null) {
           genotypesCount_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000020);
         } else {
           genotypesCountBuilder_.clear();
         }
         refAlleleFreq_ = 0F;
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000040);
         altAlleleFreq_ = 0F;
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000080);
         if (genotypesFreqBuilder_ == null) {
           genotypesFreq_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000100);
         } else {
           genotypesFreqBuilder_.clear();
         }
         missingAlleles_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000040);
-        missingGenotypes_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000080);
-        maf_ = 0F;
-        bitField0_ = (bitField0_ & ~0x00000100);
-        mgf_ = 0F;
         bitField0_ = (bitField0_ & ~0x00000200);
-        mafAllele_ = "";
+        missingGenotypes_ = 0;
         bitField0_ = (bitField0_ & ~0x00000400);
-        mgfGenotype_ = "";
+        maf_ = 0F;
         bitField0_ = (bitField0_ & ~0x00000800);
-        passedFilters_ = false;
+        mgf_ = 0F;
         bitField0_ = (bitField0_ & ~0x00001000);
-        quality_ = 0F;
+        mafAllele_ = "";
         bitField0_ = (bitField0_ & ~0x00002000);
-        numSamples_ = 0;
+        mgfGenotype_ = "";
         bitField0_ = (bitField0_ & ~0x00004000);
-        transitionsCount_ = 0;
+        passedFilters_ = false;
         bitField0_ = (bitField0_ & ~0x00008000);
-        transversionsCount_ = 0;
+        quality_ = 0F;
         bitField0_ = (bitField0_ & ~0x00010000);
-        mendelianErrors_ = 0;
+        numSamples_ = 0;
         bitField0_ = (bitField0_ & ~0x00020000);
-        casesPercentDominant_ = 0F;
+        mendelianErrors_ = 0;
         bitField0_ = (bitField0_ & ~0x00040000);
-        controlsPercentDominant_ = 0F;
+        casesPercentDominant_ = 0F;
         bitField0_ = (bitField0_ & ~0x00080000);
-        casesPercentRecessive_ = 0F;
+        controlsPercentDominant_ = 0F;
         bitField0_ = (bitField0_ & ~0x00100000);
-        controlsPercentRecessive_ = 0F;
+        casesPercentRecessive_ = 0F;
         bitField0_ = (bitField0_ & ~0x00200000);
-        hardyWeinberg_ = 0F;
+        controlsPercentRecessive_ = 0F;
         bitField0_ = (bitField0_ & ~0x00400000);
+        if (hardyWeinbergBuilder_ == null) {
+          hardyWeinberg_ = org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats.getDefaultInstance();
+        } else {
+          hardyWeinbergBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00800000);
         return this;
       }
 
@@ -2947,105 +5994,113 @@ public final class VariantStatsProtos {
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
           to_bitField0_ |= 0x00000001;
         }
-        result.refAlleleCount_ = refAlleleCount_;
+        result.refAllele_ = refAllele_;
         if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
           to_bitField0_ |= 0x00000002;
         }
+        result.altAllele_ = altAllele_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.type_ = type_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.refAlleleCount_ = refAlleleCount_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
         result.altAlleleCount_ = altAlleleCount_;
         if (genotypesCountBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          if (((bitField0_ & 0x00000020) == 0x00000020)) {
             genotypesCount_ = java.util.Collections.unmodifiableList(genotypesCount_);
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000020);
           }
           result.genotypesCount_ = genotypesCount_;
         } else {
           result.genotypesCount_ = genotypesCountBuilder_.build();
         }
-        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
-          to_bitField0_ |= 0x00000004;
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+          to_bitField0_ |= 0x00000020;
         }
         result.refAlleleFreq_ = refAlleleFreq_;
-        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
-          to_bitField0_ |= 0x00000008;
+        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
+          to_bitField0_ |= 0x00000040;
         }
         result.altAlleleFreq_ = altAlleleFreq_;
         if (genotypesFreqBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          if (((bitField0_ & 0x00000100) == 0x00000100)) {
             genotypesFreq_ = java.util.Collections.unmodifiableList(genotypesFreq_);
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000100);
           }
           result.genotypesFreq_ = genotypesFreq_;
         } else {
           result.genotypesFreq_ = genotypesFreqBuilder_.build();
         }
-        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
-          to_bitField0_ |= 0x00000010;
-        }
-        result.missingAlleles_ = missingAlleles_;
-        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
-          to_bitField0_ |= 0x00000020;
-        }
-        result.missingGenotypes_ = missingGenotypes_;
-        if (((from_bitField0_ & 0x00000100) == 0x00000100)) {
-          to_bitField0_ |= 0x00000040;
-        }
-        result.maf_ = maf_;
         if (((from_bitField0_ & 0x00000200) == 0x00000200)) {
           to_bitField0_ |= 0x00000080;
         }
-        result.mgf_ = mgf_;
+        result.missingAlleles_ = missingAlleles_;
         if (((from_bitField0_ & 0x00000400) == 0x00000400)) {
           to_bitField0_ |= 0x00000100;
         }
-        result.mafAllele_ = mafAllele_;
+        result.missingGenotypes_ = missingGenotypes_;
         if (((from_bitField0_ & 0x00000800) == 0x00000800)) {
           to_bitField0_ |= 0x00000200;
         }
-        result.mgfGenotype_ = mgfGenotype_;
+        result.maf_ = maf_;
         if (((from_bitField0_ & 0x00001000) == 0x00001000)) {
           to_bitField0_ |= 0x00000400;
         }
-        result.passedFilters_ = passedFilters_;
+        result.mgf_ = mgf_;
         if (((from_bitField0_ & 0x00002000) == 0x00002000)) {
           to_bitField0_ |= 0x00000800;
         }
-        result.quality_ = quality_;
+        result.mafAllele_ = mafAllele_;
         if (((from_bitField0_ & 0x00004000) == 0x00004000)) {
           to_bitField0_ |= 0x00001000;
         }
-        result.numSamples_ = numSamples_;
+        result.mgfGenotype_ = mgfGenotype_;
         if (((from_bitField0_ & 0x00008000) == 0x00008000)) {
           to_bitField0_ |= 0x00002000;
         }
-        result.transitionsCount_ = transitionsCount_;
+        result.passedFilters_ = passedFilters_;
         if (((from_bitField0_ & 0x00010000) == 0x00010000)) {
           to_bitField0_ |= 0x00004000;
         }
-        result.transversionsCount_ = transversionsCount_;
+        result.quality_ = quality_;
         if (((from_bitField0_ & 0x00020000) == 0x00020000)) {
           to_bitField0_ |= 0x00008000;
         }
-        result.mendelianErrors_ = mendelianErrors_;
+        result.numSamples_ = numSamples_;
         if (((from_bitField0_ & 0x00040000) == 0x00040000)) {
           to_bitField0_ |= 0x00010000;
         }
-        result.casesPercentDominant_ = casesPercentDominant_;
+        result.mendelianErrors_ = mendelianErrors_;
         if (((from_bitField0_ & 0x00080000) == 0x00080000)) {
           to_bitField0_ |= 0x00020000;
         }
-        result.controlsPercentDominant_ = controlsPercentDominant_;
+        result.casesPercentDominant_ = casesPercentDominant_;
         if (((from_bitField0_ & 0x00100000) == 0x00100000)) {
           to_bitField0_ |= 0x00040000;
         }
-        result.casesPercentRecessive_ = casesPercentRecessive_;
+        result.controlsPercentDominant_ = controlsPercentDominant_;
         if (((from_bitField0_ & 0x00200000) == 0x00200000)) {
           to_bitField0_ |= 0x00080000;
         }
-        result.controlsPercentRecessive_ = controlsPercentRecessive_;
+        result.casesPercentRecessive_ = casesPercentRecessive_;
         if (((from_bitField0_ & 0x00400000) == 0x00400000)) {
           to_bitField0_ |= 0x00100000;
         }
-        result.hardyWeinberg_ = hardyWeinberg_;
+        result.controlsPercentRecessive_ = controlsPercentRecessive_;
+        if (((from_bitField0_ & 0x00800000) == 0x00800000)) {
+          to_bitField0_ |= 0x00200000;
+        }
+        if (hardyWeinbergBuilder_ == null) {
+          result.hardyWeinberg_ = hardyWeinberg_;
+        } else {
+          result.hardyWeinberg_ = hardyWeinbergBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -3062,6 +6117,19 @@ public final class VariantStatsProtos {
 
       public Builder mergeFrom(org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantStats other) {
         if (other == org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantStats.getDefaultInstance()) return this;
+        if (other.hasRefAllele()) {
+          bitField0_ |= 0x00000001;
+          refAllele_ = other.refAllele_;
+          onChanged();
+        }
+        if (other.hasAltAllele()) {
+          bitField0_ |= 0x00000002;
+          altAllele_ = other.altAllele_;
+          onChanged();
+        }
+        if (other.hasType()) {
+          setType(other.getType());
+        }
         if (other.hasRefAlleleCount()) {
           setRefAlleleCount(other.getRefAlleleCount());
         }
@@ -3072,7 +6140,7 @@ public final class VariantStatsProtos {
           if (!other.genotypesCount_.isEmpty()) {
             if (genotypesCount_.isEmpty()) {
               genotypesCount_ = other.genotypesCount_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000020);
             } else {
               ensureGenotypesCountIsMutable();
               genotypesCount_.addAll(other.genotypesCount_);
@@ -3085,7 +6153,7 @@ public final class VariantStatsProtos {
               genotypesCountBuilder_.dispose();
               genotypesCountBuilder_ = null;
               genotypesCount_ = other.genotypesCount_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000020);
               genotypesCountBuilder_ = 
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getGenotypesCountFieldBuilder() : null;
@@ -3104,7 +6172,7 @@ public final class VariantStatsProtos {
           if (!other.genotypesFreq_.isEmpty()) {
             if (genotypesFreq_.isEmpty()) {
               genotypesFreq_ = other.genotypesFreq_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000100);
             } else {
               ensureGenotypesFreqIsMutable();
               genotypesFreq_.addAll(other.genotypesFreq_);
@@ -3117,7 +6185,7 @@ public final class VariantStatsProtos {
               genotypesFreqBuilder_.dispose();
               genotypesFreqBuilder_ = null;
               genotypesFreq_ = other.genotypesFreq_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000100);
               genotypesFreqBuilder_ = 
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getGenotypesFreqFieldBuilder() : null;
@@ -3139,12 +6207,12 @@ public final class VariantStatsProtos {
           setMgf(other.getMgf());
         }
         if (other.hasMafAllele()) {
-          bitField0_ |= 0x00000400;
+          bitField0_ |= 0x00002000;
           mafAllele_ = other.mafAllele_;
           onChanged();
         }
         if (other.hasMgfGenotype()) {
-          bitField0_ |= 0x00000800;
+          bitField0_ |= 0x00004000;
           mgfGenotype_ = other.mgfGenotype_;
           onChanged();
         }
@@ -3156,12 +6224,6 @@ public final class VariantStatsProtos {
         }
         if (other.hasNumSamples()) {
           setNumSamples(other.getNumSamples());
-        }
-        if (other.hasTransitionsCount()) {
-          setTransitionsCount(other.getTransitionsCount());
-        }
-        if (other.hasTransversionsCount()) {
-          setTransversionsCount(other.getTransversionsCount());
         }
         if (other.hasMendelianErrors()) {
           setMendelianErrors(other.getMendelianErrors());
@@ -3179,13 +6241,25 @@ public final class VariantStatsProtos {
           setControlsPercentRecessive(other.getControlsPercentRecessive());
         }
         if (other.hasHardyWeinberg()) {
-          setHardyWeinberg(other.getHardyWeinberg());
+          mergeHardyWeinberg(other.getHardyWeinberg());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
 
       public final boolean isInitialized() {
+        if (!hasRefAllele()) {
+          
+          return false;
+        }
+        if (!hasAltAllele()) {
+          
+          return false;
+        }
+        if (!hasType()) {
+          
+          return false;
+        }
         if (!hasRefAlleleCount()) {
           
           return false;
@@ -3238,14 +6312,6 @@ public final class VariantStatsProtos {
           
           return false;
         }
-        if (!hasTransitionsCount()) {
-          
-          return false;
-        }
-        if (!hasTransversionsCount()) {
-          
-          return false;
-        }
         for (int i = 0; i < getGenotypesCountCount(); i++) {
           if (!getGenotypesCount(i).isInitialized()) {
             
@@ -3254,6 +6320,12 @@ public final class VariantStatsProtos {
         }
         for (int i = 0; i < getGenotypesFreqCount(); i++) {
           if (!getGenotypesFreq(i).isInitialized()) {
+            
+            return false;
+          }
+        }
+        if (hasHardyWeinberg()) {
+          if (!getHardyWeinberg().isInitialized()) {
             
             return false;
           }
@@ -3280,13 +6352,197 @@ public final class VariantStatsProtos {
       }
       private int bitField0_;
 
+      // required string ref_allele = 24;
+      private java.lang.Object refAllele_ = "";
+      /**
+       * <code>required string ref_allele = 24;</code>
+       */
+      public boolean hasRefAllele() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required string ref_allele = 24;</code>
+       */
+      public java.lang.String getRefAllele() {
+        java.lang.Object ref = refAllele_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          refAllele_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string ref_allele = 24;</code>
+       */
+      public com.google.protobuf.ByteString
+          getRefAlleleBytes() {
+        java.lang.Object ref = refAllele_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          refAllele_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string ref_allele = 24;</code>
+       */
+      public Builder setRefAllele(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        refAllele_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string ref_allele = 24;</code>
+       */
+      public Builder clearRefAllele() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        refAllele_ = getDefaultInstance().getRefAllele();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string ref_allele = 24;</code>
+       */
+      public Builder setRefAlleleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        refAllele_ = value;
+        onChanged();
+        return this;
+      }
+
+      // required string alt_allele = 25;
+      private java.lang.Object altAllele_ = "";
+      /**
+       * <code>required string alt_allele = 25;</code>
+       */
+      public boolean hasAltAllele() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required string alt_allele = 25;</code>
+       */
+      public java.lang.String getAltAllele() {
+        java.lang.Object ref = altAllele_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          altAllele_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string alt_allele = 25;</code>
+       */
+      public com.google.protobuf.ByteString
+          getAltAlleleBytes() {
+        java.lang.Object ref = altAllele_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          altAllele_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string alt_allele = 25;</code>
+       */
+      public Builder setAltAllele(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        altAllele_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string alt_allele = 25;</code>
+       */
+      public Builder clearAltAllele() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        altAllele_ = getDefaultInstance().getAltAllele();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string alt_allele = 25;</code>
+       */
+      public Builder setAltAlleleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        altAllele_ = value;
+        onChanged();
+        return this;
+      }
+
+      // required .org.opencb.biodata.models.variant.protobuf.VariantType type = 26;
+      private org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantType type_ = org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantType.SNV;
+      /**
+       * <code>required .org.opencb.biodata.models.variant.protobuf.VariantType type = 26;</code>
+       */
+      public boolean hasType() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>required .org.opencb.biodata.models.variant.protobuf.VariantType type = 26;</code>
+       */
+      public org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantType getType() {
+        return type_;
+      }
+      /**
+       * <code>required .org.opencb.biodata.models.variant.protobuf.VariantType type = 26;</code>
+       */
+      public Builder setType(org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000004;
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .org.opencb.biodata.models.variant.protobuf.VariantType type = 26;</code>
+       */
+      public Builder clearType() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        type_ = org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantType.SNV;
+        onChanged();
+        return this;
+      }
+
       // required int32 ref_allele_count = 1;
       private int refAlleleCount_ ;
       /**
        * <code>required int32 ref_allele_count = 1;</code>
        */
       public boolean hasRefAlleleCount() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
+        return ((bitField0_ & 0x00000008) == 0x00000008);
       }
       /**
        * <code>required int32 ref_allele_count = 1;</code>
@@ -3298,7 +6554,7 @@ public final class VariantStatsProtos {
        * <code>required int32 ref_allele_count = 1;</code>
        */
       public Builder setRefAlleleCount(int value) {
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000008;
         refAlleleCount_ = value;
         onChanged();
         return this;
@@ -3307,7 +6563,7 @@ public final class VariantStatsProtos {
        * <code>required int32 ref_allele_count = 1;</code>
        */
       public Builder clearRefAlleleCount() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000008);
         refAlleleCount_ = 0;
         onChanged();
         return this;
@@ -3319,7 +6575,7 @@ public final class VariantStatsProtos {
        * <code>required int32 alt_allele_count = 2;</code>
        */
       public boolean hasAltAlleleCount() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
+        return ((bitField0_ & 0x00000010) == 0x00000010);
       }
       /**
        * <code>required int32 alt_allele_count = 2;</code>
@@ -3331,7 +6587,7 @@ public final class VariantStatsProtos {
        * <code>required int32 alt_allele_count = 2;</code>
        */
       public Builder setAltAlleleCount(int value) {
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000010;
         altAlleleCount_ = value;
         onChanged();
         return this;
@@ -3340,7 +6596,7 @@ public final class VariantStatsProtos {
        * <code>required int32 alt_allele_count = 2;</code>
        */
       public Builder clearAltAlleleCount() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000010);
         altAlleleCount_ = 0;
         onChanged();
         return this;
@@ -3350,9 +6606,9 @@ public final class VariantStatsProtos {
       private java.util.List<org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantStats.Count> genotypesCount_ =
         java.util.Collections.emptyList();
       private void ensureGenotypesCountIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
           genotypesCount_ = new java.util.ArrayList<org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantStats.Count>(genotypesCount_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000020;
          }
       }
 
@@ -3501,7 +6757,7 @@ public final class VariantStatsProtos {
       public Builder clearGenotypesCount() {
         if (genotypesCountBuilder_ == null) {
           genotypesCount_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000020);
           onChanged();
         } else {
           genotypesCountBuilder_.clear();
@@ -3578,7 +6834,7 @@ public final class VariantStatsProtos {
           genotypesCountBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
               org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantStats.Count, org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantStats.Count.Builder, org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantStats.CountOrBuilder>(
                   genotypesCount_,
-                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  ((bitField0_ & 0x00000020) == 0x00000020),
                   getParentForChildren(),
                   isClean());
           genotypesCount_ = null;
@@ -3592,7 +6848,7 @@ public final class VariantStatsProtos {
        * <code>required float ref_allele_freq = 4;</code>
        */
       public boolean hasRefAlleleFreq() {
-        return ((bitField0_ & 0x00000008) == 0x00000008);
+        return ((bitField0_ & 0x00000040) == 0x00000040);
       }
       /**
        * <code>required float ref_allele_freq = 4;</code>
@@ -3604,7 +6860,7 @@ public final class VariantStatsProtos {
        * <code>required float ref_allele_freq = 4;</code>
        */
       public Builder setRefAlleleFreq(float value) {
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000040;
         refAlleleFreq_ = value;
         onChanged();
         return this;
@@ -3613,7 +6869,7 @@ public final class VariantStatsProtos {
        * <code>required float ref_allele_freq = 4;</code>
        */
       public Builder clearRefAlleleFreq() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000040);
         refAlleleFreq_ = 0F;
         onChanged();
         return this;
@@ -3625,7 +6881,7 @@ public final class VariantStatsProtos {
        * <code>required float alt_allele_freq = 5;</code>
        */
       public boolean hasAltAlleleFreq() {
-        return ((bitField0_ & 0x00000010) == 0x00000010);
+        return ((bitField0_ & 0x00000080) == 0x00000080);
       }
       /**
        * <code>required float alt_allele_freq = 5;</code>
@@ -3637,7 +6893,7 @@ public final class VariantStatsProtos {
        * <code>required float alt_allele_freq = 5;</code>
        */
       public Builder setAltAlleleFreq(float value) {
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000080;
         altAlleleFreq_ = value;
         onChanged();
         return this;
@@ -3646,7 +6902,7 @@ public final class VariantStatsProtos {
        * <code>required float alt_allele_freq = 5;</code>
        */
       public Builder clearAltAlleleFreq() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000080);
         altAlleleFreq_ = 0F;
         onChanged();
         return this;
@@ -3656,9 +6912,9 @@ public final class VariantStatsProtos {
       private java.util.List<org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantStats.Frequency> genotypesFreq_ =
         java.util.Collections.emptyList();
       private void ensureGenotypesFreqIsMutable() {
-        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (!((bitField0_ & 0x00000100) == 0x00000100)) {
           genotypesFreq_ = new java.util.ArrayList<org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantStats.Frequency>(genotypesFreq_);
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000100;
          }
       }
 
@@ -3807,7 +7063,7 @@ public final class VariantStatsProtos {
       public Builder clearGenotypesFreq() {
         if (genotypesFreqBuilder_ == null) {
           genotypesFreq_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000100);
           onChanged();
         } else {
           genotypesFreqBuilder_.clear();
@@ -3884,7 +7140,7 @@ public final class VariantStatsProtos {
           genotypesFreqBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
               org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantStats.Frequency, org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantStats.Frequency.Builder, org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantStats.FrequencyOrBuilder>(
                   genotypesFreq_,
-                  ((bitField0_ & 0x00000020) == 0x00000020),
+                  ((bitField0_ & 0x00000100) == 0x00000100),
                   getParentForChildren(),
                   isClean());
           genotypesFreq_ = null;
@@ -3902,7 +7158,7 @@ public final class VariantStatsProtos {
        * </pre>
        */
       public boolean hasMissingAlleles() {
-        return ((bitField0_ & 0x00000040) == 0x00000040);
+        return ((bitField0_ & 0x00000200) == 0x00000200);
       }
       /**
        * <code>required int32 missing_alleles = 7;</code>
@@ -3922,7 +7178,7 @@ public final class VariantStatsProtos {
        * </pre>
        */
       public Builder setMissingAlleles(int value) {
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000200;
         missingAlleles_ = value;
         onChanged();
         return this;
@@ -3935,7 +7191,7 @@ public final class VariantStatsProtos {
        * </pre>
        */
       public Builder clearMissingAlleles() {
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000200);
         missingAlleles_ = 0;
         onChanged();
         return this;
@@ -3951,7 +7207,7 @@ public final class VariantStatsProtos {
        * </pre>
        */
       public boolean hasMissingGenotypes() {
-        return ((bitField0_ & 0x00000080) == 0x00000080);
+        return ((bitField0_ & 0x00000400) == 0x00000400);
       }
       /**
        * <code>required int32 missing_genotypes = 8;</code>
@@ -3971,7 +7227,7 @@ public final class VariantStatsProtos {
        * </pre>
        */
       public Builder setMissingGenotypes(int value) {
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000400;
         missingGenotypes_ = value;
         onChanged();
         return this;
@@ -3984,7 +7240,7 @@ public final class VariantStatsProtos {
        * </pre>
        */
       public Builder clearMissingGenotypes() {
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000400);
         missingGenotypes_ = 0;
         onChanged();
         return this;
@@ -4000,7 +7256,7 @@ public final class VariantStatsProtos {
        * </pre>
        */
       public boolean hasMaf() {
-        return ((bitField0_ & 0x00000100) == 0x00000100);
+        return ((bitField0_ & 0x00000800) == 0x00000800);
       }
       /**
        * <code>required float maf = 9;</code>
@@ -4020,7 +7276,7 @@ public final class VariantStatsProtos {
        * </pre>
        */
       public Builder setMaf(float value) {
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000800;
         maf_ = value;
         onChanged();
         return this;
@@ -4033,7 +7289,7 @@ public final class VariantStatsProtos {
        * </pre>
        */
       public Builder clearMaf() {
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000800);
         maf_ = 0F;
         onChanged();
         return this;
@@ -4049,7 +7305,7 @@ public final class VariantStatsProtos {
        * </pre>
        */
       public boolean hasMgf() {
-        return ((bitField0_ & 0x00000200) == 0x00000200);
+        return ((bitField0_ & 0x00001000) == 0x00001000);
       }
       /**
        * <code>required float mgf = 10;</code>
@@ -4069,7 +7325,7 @@ public final class VariantStatsProtos {
        * </pre>
        */
       public Builder setMgf(float value) {
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00001000;
         mgf_ = value;
         onChanged();
         return this;
@@ -4082,7 +7338,7 @@ public final class VariantStatsProtos {
        * </pre>
        */
       public Builder clearMgf() {
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00001000);
         mgf_ = 0F;
         onChanged();
         return this;
@@ -4098,7 +7354,7 @@ public final class VariantStatsProtos {
        * </pre>
        */
       public boolean hasMafAllele() {
-        return ((bitField0_ & 0x00000400) == 0x00000400);
+        return ((bitField0_ & 0x00002000) == 0x00002000);
       }
       /**
        * <code>required string mafAllele = 11;</code>
@@ -4150,7 +7406,7 @@ public final class VariantStatsProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000400;
+  bitField0_ |= 0x00002000;
         mafAllele_ = value;
         onChanged();
         return this;
@@ -4163,7 +7419,7 @@ public final class VariantStatsProtos {
        * </pre>
        */
       public Builder clearMafAllele() {
-        bitField0_ = (bitField0_ & ~0x00000400);
+        bitField0_ = (bitField0_ & ~0x00002000);
         mafAllele_ = getDefaultInstance().getMafAllele();
         onChanged();
         return this;
@@ -4180,7 +7436,7 @@ public final class VariantStatsProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000400;
+  bitField0_ |= 0x00002000;
         mafAllele_ = value;
         onChanged();
         return this;
@@ -4196,7 +7452,7 @@ public final class VariantStatsProtos {
        * </pre>
        */
       public boolean hasMgfGenotype() {
-        return ((bitField0_ & 0x00000800) == 0x00000800);
+        return ((bitField0_ & 0x00004000) == 0x00004000);
       }
       /**
        * <code>required string mgfGenotype = 12;</code>
@@ -4248,7 +7504,7 @@ public final class VariantStatsProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000800;
+  bitField0_ |= 0x00004000;
         mgfGenotype_ = value;
         onChanged();
         return this;
@@ -4261,7 +7517,7 @@ public final class VariantStatsProtos {
        * </pre>
        */
       public Builder clearMgfGenotype() {
-        bitField0_ = (bitField0_ & ~0x00000800);
+        bitField0_ = (bitField0_ & ~0x00004000);
         mgfGenotype_ = getDefaultInstance().getMgfGenotype();
         onChanged();
         return this;
@@ -4278,7 +7534,7 @@ public final class VariantStatsProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000800;
+  bitField0_ |= 0x00004000;
         mgfGenotype_ = value;
         onChanged();
         return this;
@@ -4290,7 +7546,7 @@ public final class VariantStatsProtos {
        * <code>required bool passed_filters = 13;</code>
        */
       public boolean hasPassedFilters() {
-        return ((bitField0_ & 0x00001000) == 0x00001000);
+        return ((bitField0_ & 0x00008000) == 0x00008000);
       }
       /**
        * <code>required bool passed_filters = 13;</code>
@@ -4302,7 +7558,7 @@ public final class VariantStatsProtos {
        * <code>required bool passed_filters = 13;</code>
        */
       public Builder setPassedFilters(boolean value) {
-        bitField0_ |= 0x00001000;
+        bitField0_ |= 0x00008000;
         passedFilters_ = value;
         onChanged();
         return this;
@@ -4311,7 +7567,7 @@ public final class VariantStatsProtos {
        * <code>required bool passed_filters = 13;</code>
        */
       public Builder clearPassedFilters() {
-        bitField0_ = (bitField0_ & ~0x00001000);
+        bitField0_ = (bitField0_ & ~0x00008000);
         passedFilters_ = false;
         onChanged();
         return this;
@@ -4323,7 +7579,7 @@ public final class VariantStatsProtos {
        * <code>required float quality = 14;</code>
        */
       public boolean hasQuality() {
-        return ((bitField0_ & 0x00002000) == 0x00002000);
+        return ((bitField0_ & 0x00010000) == 0x00010000);
       }
       /**
        * <code>required float quality = 14;</code>
@@ -4335,7 +7591,7 @@ public final class VariantStatsProtos {
        * <code>required float quality = 14;</code>
        */
       public Builder setQuality(float value) {
-        bitField0_ |= 0x00002000;
+        bitField0_ |= 0x00010000;
         quality_ = value;
         onChanged();
         return this;
@@ -4344,7 +7600,7 @@ public final class VariantStatsProtos {
        * <code>required float quality = 14;</code>
        */
       public Builder clearQuality() {
-        bitField0_ = (bitField0_ & ~0x00002000);
+        bitField0_ = (bitField0_ & ~0x00010000);
         quality_ = 0F;
         onChanged();
         return this;
@@ -4356,7 +7612,7 @@ public final class VariantStatsProtos {
        * <code>required int32 num_samples = 15;</code>
        */
       public boolean hasNumSamples() {
-        return ((bitField0_ & 0x00004000) == 0x00004000);
+        return ((bitField0_ & 0x00020000) == 0x00020000);
       }
       /**
        * <code>required int32 num_samples = 15;</code>
@@ -4368,7 +7624,7 @@ public final class VariantStatsProtos {
        * <code>required int32 num_samples = 15;</code>
        */
       public Builder setNumSamples(int value) {
-        bitField0_ |= 0x00004000;
+        bitField0_ |= 0x00020000;
         numSamples_ = value;
         onChanged();
         return this;
@@ -4377,74 +7633,8 @@ public final class VariantStatsProtos {
        * <code>required int32 num_samples = 15;</code>
        */
       public Builder clearNumSamples() {
-        bitField0_ = (bitField0_ & ~0x00004000);
+        bitField0_ = (bitField0_ & ~0x00020000);
         numSamples_ = 0;
-        onChanged();
-        return this;
-      }
-
-      // required int32 transitions_count = 16;
-      private int transitionsCount_ ;
-      /**
-       * <code>required int32 transitions_count = 16;</code>
-       */
-      public boolean hasTransitionsCount() {
-        return ((bitField0_ & 0x00008000) == 0x00008000);
-      }
-      /**
-       * <code>required int32 transitions_count = 16;</code>
-       */
-      public int getTransitionsCount() {
-        return transitionsCount_;
-      }
-      /**
-       * <code>required int32 transitions_count = 16;</code>
-       */
-      public Builder setTransitionsCount(int value) {
-        bitField0_ |= 0x00008000;
-        transitionsCount_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required int32 transitions_count = 16;</code>
-       */
-      public Builder clearTransitionsCount() {
-        bitField0_ = (bitField0_ & ~0x00008000);
-        transitionsCount_ = 0;
-        onChanged();
-        return this;
-      }
-
-      // required int32 transversions_count = 17;
-      private int transversionsCount_ ;
-      /**
-       * <code>required int32 transversions_count = 17;</code>
-       */
-      public boolean hasTransversionsCount() {
-        return ((bitField0_ & 0x00010000) == 0x00010000);
-      }
-      /**
-       * <code>required int32 transversions_count = 17;</code>
-       */
-      public int getTransversionsCount() {
-        return transversionsCount_;
-      }
-      /**
-       * <code>required int32 transversions_count = 17;</code>
-       */
-      public Builder setTransversionsCount(int value) {
-        bitField0_ |= 0x00010000;
-        transversionsCount_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required int32 transversions_count = 17;</code>
-       */
-      public Builder clearTransversionsCount() {
-        bitField0_ = (bitField0_ & ~0x00010000);
-        transversionsCount_ = 0;
         onChanged();
         return this;
       }
@@ -4459,7 +7649,7 @@ public final class VariantStatsProtos {
        * </pre>
        */
       public boolean hasMendelianErrors() {
-        return ((bitField0_ & 0x00020000) == 0x00020000);
+        return ((bitField0_ & 0x00040000) == 0x00040000);
       }
       /**
        * <code>optional int32 mendelian_errors = 18;</code>
@@ -4479,7 +7669,7 @@ public final class VariantStatsProtos {
        * </pre>
        */
       public Builder setMendelianErrors(int value) {
-        bitField0_ |= 0x00020000;
+        bitField0_ |= 0x00040000;
         mendelianErrors_ = value;
         onChanged();
         return this;
@@ -4492,7 +7682,7 @@ public final class VariantStatsProtos {
        * </pre>
        */
       public Builder clearMendelianErrors() {
-        bitField0_ = (bitField0_ & ~0x00020000);
+        bitField0_ = (bitField0_ & ~0x00040000);
         mendelianErrors_ = 0;
         onChanged();
         return this;
@@ -4508,7 +7698,7 @@ public final class VariantStatsProtos {
        * </pre>
        */
       public boolean hasCasesPercentDominant() {
-        return ((bitField0_ & 0x00040000) == 0x00040000);
+        return ((bitField0_ & 0x00080000) == 0x00080000);
       }
       /**
        * <code>optional float cases_percent_dominant = 19;</code>
@@ -4528,7 +7718,7 @@ public final class VariantStatsProtos {
        * </pre>
        */
       public Builder setCasesPercentDominant(float value) {
-        bitField0_ |= 0x00040000;
+        bitField0_ |= 0x00080000;
         casesPercentDominant_ = value;
         onChanged();
         return this;
@@ -4541,7 +7731,7 @@ public final class VariantStatsProtos {
        * </pre>
        */
       public Builder clearCasesPercentDominant() {
-        bitField0_ = (bitField0_ & ~0x00040000);
+        bitField0_ = (bitField0_ & ~0x00080000);
         casesPercentDominant_ = 0F;
         onChanged();
         return this;
@@ -4557,7 +7747,7 @@ public final class VariantStatsProtos {
        * </pre>
        */
       public boolean hasControlsPercentDominant() {
-        return ((bitField0_ & 0x00080000) == 0x00080000);
+        return ((bitField0_ & 0x00100000) == 0x00100000);
       }
       /**
        * <code>optional float controls_percent_dominant = 20;</code>
@@ -4577,7 +7767,7 @@ public final class VariantStatsProtos {
        * </pre>
        */
       public Builder setControlsPercentDominant(float value) {
-        bitField0_ |= 0x00080000;
+        bitField0_ |= 0x00100000;
         controlsPercentDominant_ = value;
         onChanged();
         return this;
@@ -4590,7 +7780,7 @@ public final class VariantStatsProtos {
        * </pre>
        */
       public Builder clearControlsPercentDominant() {
-        bitField0_ = (bitField0_ & ~0x00080000);
+        bitField0_ = (bitField0_ & ~0x00100000);
         controlsPercentDominant_ = 0F;
         onChanged();
         return this;
@@ -4606,7 +7796,7 @@ public final class VariantStatsProtos {
        * </pre>
        */
       public boolean hasCasesPercentRecessive() {
-        return ((bitField0_ & 0x00100000) == 0x00100000);
+        return ((bitField0_ & 0x00200000) == 0x00200000);
       }
       /**
        * <code>optional float cases_percent_recessive = 21;</code>
@@ -4626,7 +7816,7 @@ public final class VariantStatsProtos {
        * </pre>
        */
       public Builder setCasesPercentRecessive(float value) {
-        bitField0_ |= 0x00100000;
+        bitField0_ |= 0x00200000;
         casesPercentRecessive_ = value;
         onChanged();
         return this;
@@ -4639,7 +7829,7 @@ public final class VariantStatsProtos {
        * </pre>
        */
       public Builder clearCasesPercentRecessive() {
-        bitField0_ = (bitField0_ & ~0x00100000);
+        bitField0_ = (bitField0_ & ~0x00200000);
         casesPercentRecessive_ = 0F;
         onChanged();
         return this;
@@ -4655,7 +7845,7 @@ public final class VariantStatsProtos {
        * </pre>
        */
       public boolean hasControlsPercentRecessive() {
-        return ((bitField0_ & 0x00200000) == 0x00200000);
+        return ((bitField0_ & 0x00400000) == 0x00400000);
       }
       /**
        * <code>optional float controls_percent_recessive = 22;</code>
@@ -4675,7 +7865,7 @@ public final class VariantStatsProtos {
        * </pre>
        */
       public Builder setControlsPercentRecessive(float value) {
-        bitField0_ |= 0x00200000;
+        bitField0_ |= 0x00400000;
         controlsPercentRecessive_ = value;
         onChanged();
         return this;
@@ -4688,59 +7878,163 @@ public final class VariantStatsProtos {
        * </pre>
        */
       public Builder clearControlsPercentRecessive() {
-        bitField0_ = (bitField0_ & ~0x00200000);
+        bitField0_ = (bitField0_ & ~0x00400000);
         controlsPercentRecessive_ = 0F;
         onChanged();
         return this;
       }
 
-      // optional float hardy_weinberg = 23;
-      private float hardyWeinberg_ ;
+      // optional .org.opencb.biodata.models.variant.protobuf.VariantHardyWeinbergStats hardy_weinberg = 23;
+      private org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats hardyWeinberg_ = org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats, org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats.Builder, org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStatsOrBuilder> hardyWeinbergBuilder_;
       /**
-       * <code>optional float hardy_weinberg = 23;</code>
+       * <code>optional .org.opencb.biodata.models.variant.protobuf.VariantHardyWeinbergStats hardy_weinberg = 23;</code>
        *
        * <pre>
        * All samples Hardy-Weinberg stats
        * </pre>
        */
       public boolean hasHardyWeinberg() {
-        return ((bitField0_ & 0x00400000) == 0x00400000);
+        return ((bitField0_ & 0x00800000) == 0x00800000);
       }
       /**
-       * <code>optional float hardy_weinberg = 23;</code>
+       * <code>optional .org.opencb.biodata.models.variant.protobuf.VariantHardyWeinbergStats hardy_weinberg = 23;</code>
        *
        * <pre>
        * All samples Hardy-Weinberg stats
        * </pre>
        */
-      public float getHardyWeinberg() {
-        return hardyWeinberg_;
+      public org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats getHardyWeinberg() {
+        if (hardyWeinbergBuilder_ == null) {
+          return hardyWeinberg_;
+        } else {
+          return hardyWeinbergBuilder_.getMessage();
+        }
       }
       /**
-       * <code>optional float hardy_weinberg = 23;</code>
+       * <code>optional .org.opencb.biodata.models.variant.protobuf.VariantHardyWeinbergStats hardy_weinberg = 23;</code>
        *
        * <pre>
        * All samples Hardy-Weinberg stats
        * </pre>
        */
-      public Builder setHardyWeinberg(float value) {
-        bitField0_ |= 0x00400000;
-        hardyWeinberg_ = value;
-        onChanged();
+      public Builder setHardyWeinberg(org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats value) {
+        if (hardyWeinbergBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          hardyWeinberg_ = value;
+          onChanged();
+        } else {
+          hardyWeinbergBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00800000;
         return this;
       }
       /**
-       * <code>optional float hardy_weinberg = 23;</code>
+       * <code>optional .org.opencb.biodata.models.variant.protobuf.VariantHardyWeinbergStats hardy_weinberg = 23;</code>
+       *
+       * <pre>
+       * All samples Hardy-Weinberg stats
+       * </pre>
+       */
+      public Builder setHardyWeinberg(
+          org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats.Builder builderForValue) {
+        if (hardyWeinbergBuilder_ == null) {
+          hardyWeinberg_ = builderForValue.build();
+          onChanged();
+        } else {
+          hardyWeinbergBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00800000;
+        return this;
+      }
+      /**
+       * <code>optional .org.opencb.biodata.models.variant.protobuf.VariantHardyWeinbergStats hardy_weinberg = 23;</code>
+       *
+       * <pre>
+       * All samples Hardy-Weinberg stats
+       * </pre>
+       */
+      public Builder mergeHardyWeinberg(org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats value) {
+        if (hardyWeinbergBuilder_ == null) {
+          if (((bitField0_ & 0x00800000) == 0x00800000) &&
+              hardyWeinberg_ != org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats.getDefaultInstance()) {
+            hardyWeinberg_ =
+              org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats.newBuilder(hardyWeinberg_).mergeFrom(value).buildPartial();
+          } else {
+            hardyWeinberg_ = value;
+          }
+          onChanged();
+        } else {
+          hardyWeinbergBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00800000;
+        return this;
+      }
+      /**
+       * <code>optional .org.opencb.biodata.models.variant.protobuf.VariantHardyWeinbergStats hardy_weinberg = 23;</code>
        *
        * <pre>
        * All samples Hardy-Weinberg stats
        * </pre>
        */
       public Builder clearHardyWeinberg() {
-        bitField0_ = (bitField0_ & ~0x00400000);
-        hardyWeinberg_ = 0F;
-        onChanged();
+        if (hardyWeinbergBuilder_ == null) {
+          hardyWeinberg_ = org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats.getDefaultInstance();
+          onChanged();
+        } else {
+          hardyWeinbergBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00800000);
         return this;
+      }
+      /**
+       * <code>optional .org.opencb.biodata.models.variant.protobuf.VariantHardyWeinbergStats hardy_weinberg = 23;</code>
+       *
+       * <pre>
+       * All samples Hardy-Weinberg stats
+       * </pre>
+       */
+      public org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats.Builder getHardyWeinbergBuilder() {
+        bitField0_ |= 0x00800000;
+        onChanged();
+        return getHardyWeinbergFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .org.opencb.biodata.models.variant.protobuf.VariantHardyWeinbergStats hardy_weinberg = 23;</code>
+       *
+       * <pre>
+       * All samples Hardy-Weinberg stats
+       * </pre>
+       */
+      public org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStatsOrBuilder getHardyWeinbergOrBuilder() {
+        if (hardyWeinbergBuilder_ != null) {
+          return hardyWeinbergBuilder_.getMessageOrBuilder();
+        } else {
+          return hardyWeinberg_;
+        }
+      }
+      /**
+       * <code>optional .org.opencb.biodata.models.variant.protobuf.VariantHardyWeinbergStats hardy_weinberg = 23;</code>
+       *
+       * <pre>
+       * All samples Hardy-Weinberg stats
+       * </pre>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats, org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats.Builder, org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStatsOrBuilder> 
+          getHardyWeinbergFieldBuilder() {
+        if (hardyWeinbergBuilder_ == null) {
+          hardyWeinbergBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats, org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStats.Builder, org.opencb.biodata.models.variant.protobuf.VariantStatsProtos.VariantHardyWeinbergStatsOrBuilder>(
+                  hardyWeinberg_,
+                  getParentForChildren(),
+                  isClean());
+          hardyWeinberg_ = null;
+        }
+        return hardyWeinbergBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:org.opencb.biodata.models.variant.protobuf.VariantStats)
@@ -4754,6 +8048,16 @@ public final class VariantStatsProtos {
     // @@protoc_insertion_point(class_scope:org.opencb.biodata.models.variant.protobuf.VariantStats)
   }
 
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_org_opencb_biodata_models_variant_protobuf_Genotype_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_org_opencb_biodata_models_variant_protobuf_Genotype_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_org_opencb_biodata_models_variant_protobuf_VariantHardyWeinbergStats_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_org_opencb_biodata_models_variant_protobuf_VariantHardyWeinbergStats_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
     internal_static_org_opencb_biodata_models_variant_protobuf_VariantStats_descriptor;
   private static
@@ -4779,40 +8083,71 @@ public final class VariantStatsProtos {
   static {
     java.lang.String[] descriptorData = {
       "\n\022VariantStats.proto\022*org.opencb.biodata" +
-      ".models.variant.protobuf\"\241\006\n\014VariantStat" +
-      "s\022\030\n\020ref_allele_count\030\001 \002(\005\022\030\n\020alt_allel" +
-      "e_count\030\002 \002(\005\022W\n\017genotypes_count\030\003 \003(\0132>" +
-      ".org.opencb.biodata.models.variant.proto" +
-      "buf.VariantStats.Count\022\027\n\017ref_allele_fre" +
-      "q\030\004 \002(\002\022\027\n\017alt_allele_freq\030\005 \002(\002\022Z\n\016geno" +
-      "types_freq\030\006 \003(\0132B.org.opencb.biodata.mo" +
-      "dels.variant.protobuf.VariantStats.Frequ" +
-      "ency\022\027\n\017missing_alleles\030\007 \002(\005\022\031\n\021missing",
-      "_genotypes\030\010 \002(\005\022\013\n\003maf\030\t \002(\002\022\013\n\003mgf\030\n \002" +
-      "(\002\022\021\n\tmafAllele\030\013 \002(\t\022\023\n\013mgfGenotype\030\014 \002" +
-      "(\t\022\026\n\016passed_filters\030\r \002(\010\022\017\n\007quality\030\016 " +
-      "\002(\002\022\023\n\013num_samples\030\017 \002(\005\022\031\n\021transitions_" +
-      "count\030\020 \002(\005\022\033\n\023transversions_count\030\021 \002(\005" +
-      "\022\030\n\020mendelian_errors\030\022 \001(\005\022\036\n\026cases_perc" +
-      "ent_dominant\030\023 \001(\002\022!\n\031controls_percent_d" +
-      "ominant\030\024 \001(\002\022\037\n\027cases_percent_recessive" +
-      "\030\025 \001(\002\022\"\n\032controls_percent_recessive\030\026 \001" +
-      "(\002\022\026\n\016hardy_weinberg\030\027 \001(\002\032#\n\005Count\022\013\n\003k",
-      "ey\030\001 \002(\t\022\r\n\005count\030\002 \002(\005\032+\n\tFrequency\022\013\n\003" +
-      "key\030\001 \002(\t\022\021\n\tfrequency\030\002 \002(\002B\024B\022VariantS" +
-      "tatsProtos"
+      ".models.variant.protobuf\032\027VariantAnnotat" +
+      "ion.proto\"\253\001\n\010Genotype\022\021\n\treference\030\001 \002(" +
+      "\t\022\021\n\talternate\030\002 \002(\t\022\023\n\013alleles_idx\030\003 \003(" +
+      "\005\022\016\n\006phased\030\004 \002(\010\022E\n\004code\030\005 \002(\01627.org.op" +
+      "encb.biodata.models.variant.protobuf.All" +
+      "elesCode\022\r\n\005count\030\006 \002(\005\"\264\001\n\031VariantHardy" +
+      "WeinbergStats\022\014\n\004chi2\030\001 \002(\002\022\016\n\006pValue\030\002 " +
+      "\002(\002\022\t\n\001n\030\003 \002(\005\022\014\n\004n_AA\030\004 \002(\005\022\r\n\005n_Ala\030\005 " +
+      "\002(\005\022\016\n\006n_lala\030\006 \002(\005\022\014\n\004e_AA\030\007 \002(\002\022\r\n\005e_A",
+      "la\030\010 \002(\002\022\016\n\006e_lala\030\t \002(\002\022\t\n\001p\030\n \002(\002\022\t\n\001q" +
+      "\030\013 \002(\002\"\213\010\n\014VariantStats\022\022\n\nref_allele\030\030 " +
+      "\002(\t\022\022\n\nalt_allele\030\031 \002(\t\022E\n\004type\030\032 \002(\01627." +
+      "org.opencb.biodata.models.variant.protob" +
+      "uf.VariantType\022\030\n\020ref_allele_count\030\001 \002(\005" +
+      "\022\030\n\020alt_allele_count\030\002 \002(\005\022W\n\017genotypes_" +
+      "count\030\003 \003(\0132>.org.opencb.biodata.models." +
+      "variant.protobuf.VariantStats.Count\022\027\n\017r" +
+      "ef_allele_freq\030\004 \002(\002\022\027\n\017alt_allele_freq\030" +
+      "\005 \002(\002\022Z\n\016genotypes_freq\030\006 \003(\0132B.org.open",
+      "cb.biodata.models.variant.protobuf.Varia" +
+      "ntStats.Frequency\022\027\n\017missing_alleles\030\007 \002" +
+      "(\005\022\031\n\021missing_genotypes\030\010 \002(\005\022\013\n\003maf\030\t \002" +
+      "(\002\022\013\n\003mgf\030\n \002(\002\022\021\n\tmafAllele\030\013 \002(\t\022\023\n\013mg" +
+      "fGenotype\030\014 \002(\t\022\026\n\016passed_filters\030\r \002(\010\022" +
+      "\017\n\007quality\030\016 \002(\002\022\023\n\013num_samples\030\017 \002(\005\022\030\n" +
+      "\020mendelian_errors\030\022 \001(\005\022\036\n\026cases_percent" +
+      "_dominant\030\023 \001(\002\022!\n\031controls_percent_domi" +
+      "nant\030\024 \001(\002\022\037\n\027cases_percent_recessive\030\025 " +
+      "\001(\002\022\"\n\032controls_percent_recessive\030\026 \001(\002\022",
+      "]\n\016hardy_weinberg\030\027 \001(\0132E.org.opencb.bio" +
+      "data.models.variant.protobuf.VariantHard" +
+      "yWeinbergStats\032Y\n\005Count\022A\n\003key\030\001 \002(\01324.o" +
+      "rg.opencb.biodata.models.variant.protobu" +
+      "f.Genotype\022\r\n\005count\030\002 \002(\005\032a\n\tFrequency\022A" +
+      "\n\003key\030\001 \002(\01324.org.opencb.biodata.models." +
+      "variant.protobuf.Genotype\022\021\n\tfrequency\030\002" +
+      " \002(\002*X\n\013AllelesCode\022\016\n\nALLELES_OK\020\001\022\023\n\017A" +
+      "LLELES_MISSING\020\002\022\027\n\023MULTIPLE_ALTERNATES\020" +
+      "\003\022\013\n\007HAPLOID\020\004*;\n\013VariantType\022\007\n\003SNV\020\000\022\007",
+      "\n\003MNV\020\001\022\t\n\005INDEL\020\002\022\006\n\002SV\020\003\022\007\n\003CNV\020\004B\024B\022V" +
+      "ariantStatsProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
         public com.google.protobuf.ExtensionRegistry assignDescriptors(
             com.google.protobuf.Descriptors.FileDescriptor root) {
           descriptor = root;
-          internal_static_org_opencb_biodata_models_variant_protobuf_VariantStats_descriptor =
+          internal_static_org_opencb_biodata_models_variant_protobuf_Genotype_descriptor =
             getDescriptor().getMessageTypes().get(0);
+          internal_static_org_opencb_biodata_models_variant_protobuf_Genotype_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_org_opencb_biodata_models_variant_protobuf_Genotype_descriptor,
+              new java.lang.String[] { "Reference", "Alternate", "AllelesIdx", "Phased", "Code", "Count", });
+          internal_static_org_opencb_biodata_models_variant_protobuf_VariantHardyWeinbergStats_descriptor =
+            getDescriptor().getMessageTypes().get(1);
+          internal_static_org_opencb_biodata_models_variant_protobuf_VariantHardyWeinbergStats_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_org_opencb_biodata_models_variant_protobuf_VariantHardyWeinbergStats_descriptor,
+              new java.lang.String[] { "Chi2", "PValue", "N", "NAA", "NAla", "NLala", "EAA", "EAla", "ELala", "P", "Q", });
+          internal_static_org_opencb_biodata_models_variant_protobuf_VariantStats_descriptor =
+            getDescriptor().getMessageTypes().get(2);
           internal_static_org_opencb_biodata_models_variant_protobuf_VariantStats_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_org_opencb_biodata_models_variant_protobuf_VariantStats_descriptor,
-              new java.lang.String[] { "RefAlleleCount", "AltAlleleCount", "GenotypesCount", "RefAlleleFreq", "AltAlleleFreq", "GenotypesFreq", "MissingAlleles", "MissingGenotypes", "Maf", "Mgf", "MafAllele", "MgfGenotype", "PassedFilters", "Quality", "NumSamples", "TransitionsCount", "TransversionsCount", "MendelianErrors", "CasesPercentDominant", "ControlsPercentDominant", "CasesPercentRecessive", "ControlsPercentRecessive", "HardyWeinberg", });
+              new java.lang.String[] { "RefAllele", "AltAllele", "Type", "RefAlleleCount", "AltAlleleCount", "GenotypesCount", "RefAlleleFreq", "AltAlleleFreq", "GenotypesFreq", "MissingAlleles", "MissingGenotypes", "Maf", "Mgf", "MafAllele", "MgfGenotype", "PassedFilters", "Quality", "NumSamples", "MendelianErrors", "CasesPercentDominant", "ControlsPercentDominant", "CasesPercentRecessive", "ControlsPercentRecessive", "HardyWeinberg", });
           internal_static_org_opencb_biodata_models_variant_protobuf_VariantStats_Count_descriptor =
             internal_static_org_opencb_biodata_models_variant_protobuf_VariantStats_descriptor.getNestedTypes().get(0);
           internal_static_org_opencb_biodata_models_variant_protobuf_VariantStats_Count_fieldAccessorTable = new
@@ -4831,6 +8166,7 @@ public final class VariantStatsProtos {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          org.opencb.biodata.models.variant.protobuf.VariantAnnotationProtos.getDescriptor(),
         }, assigner);
   }
 

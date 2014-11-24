@@ -33,8 +33,16 @@ public class Genotype {
         this.count = 0;
         parseGenotype(genotype);
     }
-    
-    
+
+    public Genotype(String reference, String alternate, int[] allelesIdx, boolean phased, AllelesCode code, int count) {
+        this.reference = reference;
+        this.alternate = alternate;
+        this.allelesIdx = allelesIdx;
+        this.phased = phased;
+        this.code = code;
+        this.count = count;
+    }
+
     private void parseGenotype(String genotype) {
         String[] alleles = genotype.split("/|\\|", -1);
         

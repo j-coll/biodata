@@ -134,7 +134,23 @@ public class Variant {
         }
         
         this.sourceEntries = new HashMap<>();
-        this.annotation = new VariantAnnotation(this.chromosome, this.start, this.end, this.reference);
+        this.annotation = new VariantAnnotation(this.chromosome, this.start, this.end, this.reference, this.alternate);
+    }
+
+    public Variant(VariantType type, String chromosome, int start, int end, int length, String reference,
+                   String alternate, String id, Map<String, Set<String>> hgvs,
+                   Map<String, VariantSourceEntry> sourceEntries, VariantAnnotation annotation) {
+        this.type = type;
+        this.chromosome = chromosome;
+        this.start = start;
+        this.end = end;
+        this.length = length;
+        this.reference = reference;
+        this.alternate = alternate;
+        this.id = id;
+        this.hgvs = hgvs;
+        this.sourceEntries = sourceEntries;
+        this.annotation = annotation;
     }
 
     public VariantType getType() {
@@ -311,16 +327,16 @@ public class Variant {
     @Override
     public String toString() {
         return "Variant{" +
-                "chromosome='" + chromosome + '\'' +
-                ", position=" + start + "-" + end + 
+                "type=" + type +
+                ", chromosome='" + chromosome + '\'' +
+                ", position=" + start + "-" + end +
+                ", length=" + length +
                 ", reference='" + reference + '\'' +
                 ", alternate='" + alternate + '\'' +
                 ", id='" + id + '\'' +
-//                ", format='" + format + '\'' +
-//                ", samplesData=" + samplesData +
-//                ", stats=" + stats +
-//                ", annotation=" + annotation +
-//                ", attributes=" + attributes +
+                ", hgvs=" + hgvs +
+                ", sourceEntries=" + sourceEntries +
+                ", annotation=" + annotation +
                 '}';
     }
 

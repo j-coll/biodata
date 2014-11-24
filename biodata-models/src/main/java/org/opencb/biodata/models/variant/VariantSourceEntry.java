@@ -1,9 +1,7 @@
 package org.opencb.biodata.models.variant;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
+
 import org.opencb.biodata.models.variant.stats.VariantStats;
 
 /** 
@@ -66,9 +64,32 @@ public class VariantSourceEntry {
         this.attributes = new LinkedHashMap<>();
     }
 
-    
+    public VariantSourceEntry(String fileId, String studyId, String[] secondaryAlternates, String format,
+                              Map<String, Map<String, String>> samplesData, VariantStats stats, Map<String, String> attributes) {
+        this.fileId = fileId;
+        this.studyId = studyId;
+        this.secondaryAlternates = secondaryAlternates;
+        this.format = format;
+        this.samplesData = samplesData;
+        this.stats = stats;
+        this.attributes = attributes;
+    }
+
     public String getFileId() {
         return fileId;
+    }
+
+    @Override
+    public String toString() {
+        return "VariantSourceEntry{" +
+                "fileId='" + fileId + '\'' +
+                ", studyId='" + studyId + '\'' +
+                ", secondaryAlternates=" + Arrays.toString(secondaryAlternates) +
+                ", format='" + format + '\'' +
+                ", samplesData=" + samplesData +
+                ", stats=" + stats +
+                ", attributes=" + attributes +
+                '}';
     }
 
     public void setFileId(String fileId) {
