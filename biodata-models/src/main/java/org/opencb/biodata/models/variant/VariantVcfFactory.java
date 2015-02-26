@@ -204,7 +204,7 @@ public class VariantVcfFactory implements VariantFactory {
     protected void parseSplitSampleData(Variant variant, VariantSource source, String[] fields, 
             String[] alternateAlleles, String[] secondaryAlternates, int alleleIdx) throws NonStandardCompliantSampleField {
         String[] formatFields = variant.getSourceEntry(source.getFileId(), source.getStudyId()).getFormat().split(":");
-        List<String> samples = source.getSamples();
+        List<String> samples = new ArrayList(source.getSamplesPosition().keySet());
 
         for (int i = 9; i < fields.length; i++) {
             Map<String, String> map = new HashMap<>(5);

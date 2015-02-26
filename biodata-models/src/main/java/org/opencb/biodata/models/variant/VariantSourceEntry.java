@@ -1,9 +1,7 @@
 package org.opencb.biodata.models.variant;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
+
 import org.opencb.biodata.models.variant.stats.VariantStats;
 
 /** 
@@ -184,7 +182,7 @@ public class VariantSourceEntry {
         if (!Objects.equals(this.studyId, other.studyId)) {
             return false;
         }
-        if (!Objects.equals(this.secondaryAlternates, other.secondaryAlternates)) {
+        if (!Arrays.equals(this.secondaryAlternates, other.secondaryAlternates)) {
             return false;
         }
         if (!Objects.equals(this.format, other.format)) {

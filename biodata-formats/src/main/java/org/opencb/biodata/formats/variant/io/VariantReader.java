@@ -9,7 +9,7 @@ import org.opencb.commons.io.DataReader;
  */
 public interface VariantReader extends DataReader<Variant> {
     
-    public List<String> getSampleNames();
+    @Deprecated public List<String> getSampleNames();
 
     public String getHeader();
 }

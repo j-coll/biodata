@@ -96,16 +96,18 @@ public class VariantSource {
         this.samplesPosition = samplesPosition;
     }
 
-    public List<String> getSamples() {
-        return new ArrayList(samplesPosition.keySet());
-    }
 
-    public void setSamples(List<String> newSamples) {
-        int index = samplesPosition.size();
-        for (String s : newSamples) {
-            samplesPosition.put(s, index++);
-        }
-    }
+
+//    public List<String> getSamples() {
+//        return new ArrayList(samplesIds.keySet());
+//    }
+
+//    public void setSamples(List<String> newSamples) {
+//        int index = samplesPosition.size();
+//        for (String s : newSamples) {
+//            samplesPosition.put(s, index++);
+//        }
+//    }
 
     public Pedigree getPedigree() {
         return pedigree;

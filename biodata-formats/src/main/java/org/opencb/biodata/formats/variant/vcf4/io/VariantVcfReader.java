@@ -15,10 +15,7 @@ import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.zip.GZIPInputStream;
@@ -85,7 +82,12 @@ public class VariantVcfReader implements VariantReader {
             for (Map.Entry<String, String> otherMeta : vcf4.getMetaInformation().entrySet()) {
                 source.addMetadata(otherMeta.getKey(), otherMeta.getValue());
             }
-            source.setSamples(vcf4.getSampleNames());
+            Map<String, Integer> samplesPosition = new HashMap<>(vcf4.getSampleNames().size());
+            int i = 0;
+            for (String sample : vcf4.getSampleNames()) {
+                samplesPosition.put(sample, i++);
+            }
+            source.setSamplesPosition(samplesPosition);
         } catch (IOException | FileFormatException ex) {
             Logger.getLogger(VariantVcfReader.class.getName()).log(Level.SEVERE, null, ex);
             return false;
