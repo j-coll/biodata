@@ -207,8 +207,8 @@ public class VariantVcfReader implements VariantReader {
 
     private void processHeader() throws IOException, FileFormatException {
         BufferedReader localBufferedReader;
-
-        if (Files.probeContentType(path).contains("gzip")) {
+        System.out.println("Files.probeContentType(path = " + Files.probeContentType(path));
+        if (Files.probeContentType(path).contains("gzip") || path.toString().endsWith(".gz")) {
             localBufferedReader = new BufferedReader(new InputStreamReader(new GZIPInputStream(new FileInputStream(path.toFile()))));
         } else {
             localBufferedReader = new BufferedReader(new FileReader(path.toFile()));
